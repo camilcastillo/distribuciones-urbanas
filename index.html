@@ -11,7 +11,6 @@
     :root {
       --navy: #062b49;
       --navy-deep: #031d32;
-      --navy-soft: #0b3b5e;
       --green: #9be33c;
       --green-dark: #7fca27;
       --ink: #172b3a;
@@ -24,7 +23,7 @@
       --max: 1180px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     html {
       scroll-behavior: smooth;
@@ -32,24 +31,18 @@
     }
 
     body {
-      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Helvetica, Arial, sans-serif;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       color: var(--ink);
       background: var(--white);
       line-height: 1.6;
       overflow-x: hidden;
     }
 
-    img {
-      display: block;
-      width: 100%;
-      max-width: 100%;
-    }
-
-    a { color: inherit; }
+    img { display: block; width: 100%; height: auto; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
 
     .container {
-      width: min(calc(100% - 48px), var(--max));
+      width: min(calc(100% - 36px), var(--max));
       margin-inline: auto;
     }
 
@@ -73,20 +66,9 @@
       border-radius: 99px;
     }
 
-    .section-head {
-      max-width: 720px;
-      margin-bottom: 48px;
-    }
-
-    .section-head.center {
-      margin-inline: auto;
-      text-align: center;
-    }
-
-    .section-head.center .eyebrow {
-      justify-content: center;
-    }
-
+    .section-head { max-width: 720px; margin-bottom: 48px; }
+    .section-head.center { margin-inline: auto; text-align: center; }
+    .section-head.center .eyebrow { justify-content: center; }
     .section-head h2 {
       color: var(--navy);
       font-size: clamp(32px, 4vw, 52px);
@@ -94,14 +76,51 @@
       letter-spacing: -.035em;
       margin-bottom: 16px;
     }
-
-    .section-head p {
-      color: var(--muted);
-      font-size: 17px;
-      max-width: 650px;
-    }
-
+    .section-head p { color: var(--muted); font-size: 17px; max-width: 650px; }
     .section-head.center p { margin-inline: auto; }
+
+    /* Componente Botón */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 24px;
+      border: 0;
+      border-radius: 9px;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+    }
+    .btn-primary {
+      background: var(--green);
+      color: var(--navy-deep);
+      box-shadow: 0 10px 28px rgba(155,227,60,.18);
+    }
+    .btn-primary:hover { background: #a9eb4d; transform: translateY(-2px); }
+    .btn-ghost {
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,.30);
+      background: rgba(255,255,255,.08);
+      backdrop-filter: blur(8px);
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,.15); transform: translateY(-2px); }
+
+    /* Checkmarks list */
+    .check {
+      flex: 0 0 auto;
+      width: 20px;
+      height: 20px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(155,227,60,.18);
+      color: var(--green-dark);
+      font-size: 12px;
+      font-weight: 900;
+    }
 
     /* Header */
     .site-header {
@@ -114,12 +133,10 @@
       border-bottom: 1px solid rgba(6,43,73,.08);
       transition: box-shadow .25s ease, background .25s ease;
     }
-
     .site-header.scrolled {
       box-shadow: 0 8px 30px rgba(3,29,50,.08);
       background: rgba(255,255,255,.98);
     }
-
     .nav {
       min-height: 76px;
       display: flex;
@@ -127,15 +144,7 @@
       justify-content: space-between;
       gap: 24px;
     }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 11px;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
+    .brand { display: inline-flex; align-items: center; gap: 11px; white-space: nowrap; }
     .brand-mark {
       width: 36px;
       height: 36px;
@@ -146,35 +155,12 @@
       color: var(--navy);
       background: #fbfff5;
     }
-
     .brand-mark svg { width: 24px; height: 24px; }
-
-    .brand-name {
-      font-size: 18px;
-      font-weight: 850;
-      letter-spacing: -.025em;
-      color: var(--navy);
-    }
-
+    .brand-name { font-size: 18px; font-weight: 850; letter-spacing: -.025em; color: var(--navy); }
     .brand-name span { color: var(--green-dark); }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--navy);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 650;
-      transition: color .2s ease;
-    }
-
+    .nav-links { display: flex; align-items: center; gap: 30px; list-style: none; }
+    .nav-links a { color: var(--navy); font-size: 14px; font-weight: 650; transition: color .2s ease; }
     .nav-links a:hover { color: var(--green-dark); }
-
     .nav-cta {
       display: inline-flex;
       align-items: center;
@@ -186,12 +172,7 @@
       color: var(--navy-deep) !important;
       font-weight: 800 !important;
     }
-
-    .nav-cta:hover {
-      background: var(--green-dark);
-      color: var(--navy-deep) !important;
-    }
-
+    .nav-cta:hover { background: var(--green-dark); }
     .menu-btn {
       display: none;
       width: 44px;
@@ -213,121 +194,40 @@
       background: var(--navy-deep);
       isolation: isolate;
     }
-
-    .hero-media {
-      position: absolute;
-      inset: 0;
-      z-index: -2;
-    }
-
-    .hero-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 52%;
-    }
-
+    .hero-media { position: absolute; inset: 0; z-index: -2; }
+    .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 52%; }
     .hero::after {
       content: "";
       position: absolute;
       inset: 0;
       z-index: -1;
-      background:
-        linear-gradient(90deg,
-          rgba(3,29,50,.96) 0%,
-          rgba(3,29,50,.88) 30%,
-          rgba(3,29,50,.54) 57%,
-          rgba(3,29,50,.12) 100%);
+      background: linear-gradient(90deg, rgba(3,29,50,.96) 0%, rgba(3,29,50,.88) 30%, rgba(3,29,50,.54) 57%, rgba(3,29,50,.12) 100%);
     }
-
-    .hero-content {
-      padding: 150px 0 90px;
-      max-width: 720px;
-      color: var(--white);
-    }
-
+    .hero-content { padding: 150px 0 90px; max-width: 720px; color: var(--white); }
     .hero .eyebrow { color: var(--green); }
-
     .hero h1 {
-      font-size: clamp(44px, 6vw, 76px);
+      font-size: clamp(40px, 6vw, 76px);
       line-height: .98;
       letter-spacing: -.055em;
-      max-width: 720px;
       margin-bottom: 24px;
     }
-
     .hero h1 span { color: var(--green); }
-
     .hero-copy {
       max-width: 610px;
       color: rgba(255,255,255,.86);
-      font-size: clamp(17px, 2vw, 20px);
+      font-size: clamp(16px, 2vw, 20px);
       line-height: 1.6;
       margin-bottom: 34px;
     }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-height: 52px;
-      padding: 0 24px;
-      border: 0;
-      border-radius: 9px;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 800;
-      cursor: pointer;
-      transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
-    }
-
-    .btn-primary {
-      background: var(--green);
-      color: var(--navy-deep);
-      box-shadow: 0 10px 28px rgba(155,227,60,.18);
-    }
-
-    .btn-primary:hover {
-      background: #a9eb4d;
-      transform: translateY(-2px);
-    }
-
-    .btn-ghost {
-      color: var(--white);
-      border: 1px solid rgba(255,255,255,.30);
-      background: rgba(255,255,255,.08);
-      backdrop-filter: blur(8px);
-    }
-
-    .btn-ghost:hover {
-      background: rgba(255,255,255,.15);
-      transform: translateY(-2px);
-    }
-
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
     .hero-bottom {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      inset: auto 0 0 0;
       border-top: 1px solid rgba(255,255,255,.12);
       background: rgba(3,29,50,.42);
       backdrop-filter: blur(8px);
     }
-
-    .hero-trust {
-      min-height: 78px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-    }
-
+    .hero-trust { min-height: 78px; display: grid; grid-template-columns: repeat(4, 1fr); }
     .trust-item {
       display: flex;
       flex-direction: column;
@@ -335,47 +235,20 @@
       padding: 12px 20px;
       border-right: 1px solid rgba(255,255,255,.12);
     }
-
     .trust-item:first-child { padding-left: 0; }
     .trust-item:last-child { border-right: 0; }
+    .trust-value { color: var(--white); font-size: 22px; line-height: 1; font-weight: 850; }
+    .trust-label { color: rgba(255,255,255,.65); font-size: 12px; margin-top: 5px; }
 
-    .trust-value {
-      color: var(--white);
-      font-size: 22px;
-      line-height: 1;
-      font-weight: 850;
-    }
+    /* Section Spacings */
+    .services, .company, .fleet, .contact { padding: 100px 0; }
 
-    .trust-label {
-      color: rgba(255,255,255,.65);
-      font-size: 12px;
-      margin-top: 5px;
-    }
-
-    /* Intro metrics */
-    .metrics {
-      padding: 54px 0;
-      background: var(--white);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0;
-    }
-
-    .metric {
-      padding: 8px 30px;
-      border-right: 1px solid var(--line);
-    }
-
+    /* Metrics */
+    .metrics { padding: 54px 0; background: var(--white); border-bottom: 1px solid var(--line); }
+    .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .metric { padding: 8px 30px; border-right: 1px solid var(--line); }
     .metric:first-child { padding-left: 0; }
-    .metric:last-child {
-      border-right: 0;
-      padding-right: 0;
-    }
-
+    .metric:last-child { border-right: 0; padding-right: 0; }
     .metric strong {
       display: block;
       color: var(--navy);
@@ -384,25 +257,11 @@
       letter-spacing: -.04em;
       margin-bottom: 7px;
     }
-
-    .metric span {
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 650;
-    }
+    .metric span { color: var(--muted); font-size: 13px; font-weight: 650; }
 
     /* Services */
-    .services {
-      padding: 110px 0;
-      background: var(--surface);
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-    }
-
+    .services { background: var(--surface); }
+    .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
     .service-card {
       position: relative;
       min-height: 290px;
@@ -412,7 +271,6 @@
       color: var(--white);
       box-shadow: var(--shadow);
     }
-
     .service-card img {
       position: absolute;
       inset: 0;
@@ -420,16 +278,13 @@
       object-fit: cover;
       transition: transform .5s ease;
     }
-
     .service-card:hover img { transform: scale(1.04); }
-
     .service-card::after {
       content: "";
       position: absolute;
       inset: 0;
       background: linear-gradient(180deg, rgba(3,29,50,.08), rgba(3,29,50,.92));
     }
-
     .service-content {
       position: relative;
       z-index: 1;
@@ -439,99 +294,26 @@
       justify-content: flex-end;
       padding: 30px;
     }
+    .service-number { color: var(--green); font-size: 12px; font-weight: 850; letter-spacing: .15em; margin-bottom: 8px; }
+    .service-content h3 { font-size: 28px; line-height: 1.05; margin-bottom: 9px; letter-spacing: -.025em; }
+    .service-content p { color: rgba(255,255,255,.78); max-width: 500px; font-size: 14px; }
 
-    .service-number {
-      color: var(--green);
-      font-size: 12px;
-      font-weight: 850;
-      letter-spacing: .15em;
-      margin-bottom: 8px;
-    }
-
-    .service-content h3 {
-      font-size: 28px;
-      line-height: 1.05;
-      margin-bottom: 9px;
-      letter-spacing: -.025em;
-    }
-
-    .service-content p {
-      color: rgba(255,255,255,.78);
-      max-width: 500px;
-      font-size: 14px;
-    }
-
-    /* Company / infrastructure */
-    .company {
-      padding: 120px 0;
-      background: var(--white);
-    }
-
-    .company-grid {
-      display: grid;
-      grid-template-columns: .92fr 1.08fr;
-      gap: 76px;
-      align-items: center;
-    }
-
+    /* Company */
+    .company { background: var(--white); }
+    .company-grid { display: grid; grid-template-columns: .92fr 1.08fr; gap: 76px; align-items: center; }
     .company-copy h2 {
       color: var(--navy);
-      font-size: clamp(35px, 4.5vw, 58px);
+      font-size: clamp(32px, 4.5vw, 58px);
       line-height: 1.02;
       letter-spacing: -.045em;
       margin-bottom: 22px;
     }
-
     .company-copy h2 span { color: var(--green-dark); }
-
-    .company-copy > p {
-      color: var(--muted);
-      font-size: 17px;
-      margin-bottom: 18px;
-    }
-
-    .company-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 13px 24px;
-      list-style: none;
-      margin-top: 30px;
-    }
-
-    .company-list li {
-      display: flex;
-      gap: 10px;
-      color: var(--ink);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .check {
-      flex: 0 0 auto;
-      width: 20px;
-      height: 20px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: rgba(155,227,60,.18);
-      color: var(--green-dark);
-      font-size: 12px;
-      font-weight: 900;
-    }
-
-    .company-image {
-      position: relative;
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-
-    .company-image img {
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      object-position: center;
-    }
-
+    .company-copy > p { color: var(--muted); font-size: 17px; margin-bottom: 18px; }
+    .company-list { display: grid; grid-template-columns: 1fr 1fr; gap: 13px 24px; list-style: none; margin-top: 30px; }
+    .company-list li { display: flex; gap: 10px; color: var(--ink); font-size: 14px; font-weight: 700; }
+    .company-image { position: relative; border-radius: 22px; overflow: hidden; box-shadow: var(--shadow); }
+    .company-image img { aspect-ratio: 4 / 3; object-fit: cover; }
     .image-caption {
       position: absolute;
       left: 20px;
@@ -543,71 +325,19 @@
       background: rgba(3,29,50,.86);
       backdrop-filter: blur(10px);
     }
+    .image-caption strong { display: block; font-size: 17px; line-height: 1.2; margin-bottom: 3px; }
+    .image-caption span { color: rgba(255,255,255,.7); font-size: 12px; }
 
-    .image-caption strong {
-      display: block;
-      font-size: 17px;
-      line-height: 1.2;
-      margin-bottom: 3px;
-    }
-
-    .image-caption span {
-      color: rgba(255,255,255,.7);
-      font-size: 12px;
-    }
-
-    /* Full visual operation */
-    .visual-operation {
-      padding: 0;
-      background: var(--navy-deep);
-      color: var(--white);
-    }
-
-    .visual-grid {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      min-height: 590px;
-    }
-
-    .visual-image {
-      min-height: 590px;
-      overflow: hidden;
-    }
-
-    .visual-image img {
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .visual-copy {
-      display: flex;
-      align-items: center;
-      padding: 80px clamp(35px, 6vw, 90px);
-    }
-
+    /* Visual Operation */
+    .visual-operation { background: var(--navy-deep); color: var(--white); }
+    .visual-grid { display: grid; grid-template-columns: 1.05fr .95fr; min-height: 590px; }
+    .visual-image { min-height: 590px; overflow: hidden; }
+    .visual-image img { height: 100%; object-fit: cover; }
+    .visual-copy { display: flex; align-items: center; padding: 80px clamp(24px, 6vw, 90px); }
     .visual-copy .eyebrow { color: var(--green); }
-
-    .visual-copy h2 {
-      font-size: clamp(35px, 4.2vw, 56px);
-      line-height: 1.02;
-      letter-spacing: -.045em;
-      margin-bottom: 18px;
-    }
-
-    .visual-copy > div > p {
-      color: rgba(255,255,255,.72);
-      font-size: 16px;
-      max-width: 520px;
-      margin-bottom: 30px;
-    }
-
-    .process-list {
-      list-style: none;
-      display: grid;
-      gap: 0;
-    }
-
+    .visual-copy h2 { font-size: clamp(32px, 4.2vw, 56px); line-height: 1.02; letter-spacing: -.045em; margin-bottom: 18px; }
+    .visual-copy > div > p { color: rgba(255,255,255,.72); font-size: 16px; max-width: 520px; margin-bottom: 30px; }
+    .process-list { list-style: none; }
     .process-list li {
       display: grid;
       grid-template-columns: 48px 1fr;
@@ -615,55 +345,16 @@
       padding: 17px 0;
       border-top: 1px solid rgba(255,255,255,.12);
     }
-
-    .process-list li:last-child {
-      border-bottom: 1px solid rgba(255,255,255,.12);
-    }
-
-    .process-num {
-      color: var(--green);
-      font-size: 12px;
-      font-weight: 850;
-      padding-top: 3px;
-    }
-
-    .process-list strong {
-      display: block;
-      font-size: 15px;
-      margin-bottom: 2px;
-    }
-
-    .process-list span {
-      color: rgba(255,255,255,.58);
-      font-size: 13px;
-    }
+    .process-list li:last-child { border-bottom: 1px solid rgba(255,255,255,.12); }
+    .process-num { color: var(--green); font-size: 12px; font-weight: 850; padding-top: 3px; }
+    .process-list strong { display: block; font-size: 15px; margin-bottom: 2px; }
+    .process-list span { color: rgba(255,255,255,.58); font-size: 13px; }
 
     /* Fleet */
-    .fleet {
-      padding: 110px 0;
-      background: var(--surface);
-    }
-
-    .fleet-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 26px;
-      align-items: stretch;
-    }
-
-    .fleet-image {
-      overflow: hidden;
-      border-radius: var(--radius);
-      background: var(--navy);
-      box-shadow: var(--shadow);
-    }
-
-    .fleet-image img {
-      height: 100%;
-      min-height: 460px;
-      object-fit: cover;
-    }
-
+    .fleet { background: var(--surface); }
+    .fleet-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+    .fleet-image { overflow: hidden; border-radius: var(--radius); background: var(--navy); box-shadow: var(--shadow); }
+    .fleet-image img { height: 100%; min-height: 460px; object-fit: cover; }
     .fleet-copy {
       padding: 52px;
       border-radius: var(--radius);
@@ -673,126 +364,30 @@
       flex-direction: column;
       justify-content: center;
     }
+    .fleet-copy h2 { color: var(--navy); font-size: clamp(30px, 4vw, 48px); line-height: 1.05; letter-spacing: -.04em; margin-bottom: 17px; }
+    .fleet-copy p { color: var(--muted); font-size: 16px; margin-bottom: 25px; }
+    .fleet-points { list-style: none; display: grid; gap: 12px; }
+    .fleet-points li { display: flex; gap: 11px; align-items: flex-start; color: var(--ink); font-size: 14px; font-weight: 700; }
 
-    .fleet-copy h2 {
-      color: var(--navy);
-      font-size: clamp(32px, 4vw, 48px);
-      line-height: 1.05;
-      letter-spacing: -.04em;
-      margin-bottom: 17px;
-    }
-
-    .fleet-copy p {
-      color: var(--muted);
-      font-size: 16px;
-      margin-bottom: 25px;
-    }
-
-    .fleet-points {
-      list-style: none;
-      display: grid;
-      gap: 12px;
-    }
-
-    .fleet-points li {
-      display: flex;
-      gap: 11px;
-      align-items: flex-start;
-      color: var(--ink);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    /* CTA */
-    .contact {
-      padding: 105px 0;
-      background: var(--navy);
-      color: var(--white);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 75px;
-      align-items: center;
-    }
-
-    .contact-copy h2 {
-      font-size: clamp(38px, 5vw, 62px);
-      line-height: 1;
-      letter-spacing: -.045em;
-      margin-bottom: 20px;
-    }
-
+    /* Contact */
+    .contact { background: var(--navy); color: var(--white); }
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 75px; align-items: center; }
+    .contact-copy h2 { font-size: clamp(35px, 5vw, 62px); line-height: 1; letter-spacing: -.045em; margin-bottom: 20px; }
     .contact-copy h2 span { color: var(--green); }
+    .contact-copy > p { color: rgba(255,255,255,.7); font-size: 16px; max-width: 480px; margin-bottom: 28px; }
+    .contact-details { display: grid; gap: 14px; }
+    .contact-detail { display: flex; gap: 12px; align-items: flex-start; color: rgba(255,255,255,.82); font-size: 14px; }
+    .contact-detail svg { flex: 0 0 auto; width: 20px; height: 20px; color: var(--green); margin-top: 1px; }
 
-    .contact-copy > p {
-      color: rgba(255,255,255,.7);
-      font-size: 16px;
-      max-width: 480px;
-      margin-bottom: 28px;
-    }
-
-    .contact-details {
-      display: grid;
-      gap: 14px;
-    }
-
-    .contact-detail {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      color: rgba(255,255,255,.82);
-      font-size: 14px;
-    }
-
-    .contact-detail svg {
-      flex: 0 0 auto;
-      width: 20px;
-      height: 20px;
-      color: var(--green);
-      margin-top: 1px;
-    }
-
-    .form-card {
-      padding: 34px;
-      border-radius: 18px;
-      background: var(--white);
-      color: var(--ink);
-      box-shadow: 0 24px 70px rgba(0,0,0,.18);
-    }
-
-    .form-card h3 {
-      color: var(--navy);
-      font-size: 24px;
-      margin-bottom: 4px;
-    }
-
-    .form-card > p {
-      color: var(--muted);
-      font-size: 13px;
-      margin-bottom: 23px;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 13px;
-    }
-
+    /* Form */
+    .form-card { padding: 34px; border-radius: 18px; background: var(--white); color: var(--ink); box-shadow: 0 24px 70px rgba(0,0,0,.18); }
+    .form-card h3 { color: var(--navy); font-size: 24px; margin-bottom: 4px; }
+    .form-card > p { color: var(--muted); font-size: 13px; margin-bottom: 23px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
     .field { margin-bottom: 13px; }
     .field.full { grid-column: 1 / -1; }
-
-    .field label {
-      display: block;
-      color: var(--navy);
-      font-size: 12px;
-      font-weight: 800;
-      margin-bottom: 6px;
-    }
-
-    .field input,
-    .field textarea {
+    .field label { display: block; color: var(--navy); font-size: 12px; font-weight: 800; margin-bottom: 6px; }
+    .field input, .field textarea {
       width: 100%;
       border: 1px solid #dce4e8;
       border-radius: 8px;
@@ -804,250 +399,74 @@
       outline: none;
       transition: border-color .2s ease, box-shadow .2s ease;
     }
-
     .field input { height: 45px; }
-
-    .field textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
-    .field input:focus,
-    .field textarea:focus {
+    .field textarea { min-height: 110px; resize: vertical; }
+    .field input:focus, .field textarea:focus {
       border-color: var(--green-dark);
       box-shadow: 0 0 0 3px rgba(155,227,60,.18);
     }
-
-    .form-card .btn {
-      width: 100%;
-      margin-top: 3px;
-    }
-
-    .form-note {
-      color: #7a8790;
-      font-size: 11px;
-      margin-top: 10px;
-      text-align: center;
-    }
+    .form-card .btn { width: 100%; margin-top: 3px; }
+    .form-note { color: #7a8790; font-size: 11px; margin-top: 10px; text-align: center; }
 
     /* Footer */
-    footer {
-      padding: 28px 0;
-      background: var(--navy-deep);
-      color: rgba(255,255,255,.54);
-    }
-
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      font-size: 12px;
-    }
-
-    .footer-brand {
-      color: var(--white);
-      font-weight: 800;
-    }
-
+    footer { padding: 28px 0; background: var(--navy-deep); color: rgba(255,255,255,.54); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; font-size: 12px; }
+    .footer-brand { color: var(--white); font-weight: 800; }
     .footer-brand span { color: var(--green); }
 
-    /* Reveal animation */
-    .reveal {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity .7s ease, transform .7s ease;
-    }
+    /* Scroll Animations */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Responsive */
+    /* Responsive Mobile Optimizations */
     @media (max-width: 980px) {
       .nav-links {
         position: absolute;
         top: 76px;
-        left: 24px;
-        right: 24px;
+        left: 18px;
+        right: 18px;
         display: none;
         flex-direction: column;
         align-items: stretch;
-        gap: 0;
         padding: 10px;
         border: 1px solid var(--line);
         border-radius: 14px;
         background: var(--white);
         box-shadow: var(--shadow);
       }
-
       .nav-links.open { display: flex; }
-
-      .nav-links li a {
-        display: block;
-        padding: 13px 14px;
-      }
-
+      .nav-links li a { display: block; padding: 13px 14px; }
       .nav-cta { text-align: center; }
+      .menu-btn { display: grid; place-items: center; }
 
-      .menu-btn {
-        display: grid;
-        place-items: center;
-      }
-
-      .hero {
-        min-height: 680px;
-      }
-
-      .hero::after {
-        background: linear-gradient(90deg,
-          rgba(3,29,50,.94),
-          rgba(3,29,50,.64));
-      }
-
-      .hero-trust {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .trust-item {
-        border-bottom: 1px solid rgba(255,255,255,.12);
-      }
-
+      .hero { min-height: 680px; }
+      .hero-trust { grid-template-columns: repeat(2, 1fr); }
+      .trust-item { border-bottom: 1px solid rgba(255,255,255,.12); }
       .trust-item:nth-child(2) { border-right: 0; }
-      .trust-item:nth-child(3),
-      .trust-item:nth-child(4) { border-bottom: 0; }
+      .trust-item:nth-child(3), .trust-item:nth-child(4) { border-bottom: 0; }
 
-      .metrics-grid,
-      .company-grid,
-      .contact-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .company-grid { gap: 45px; }
-
-      .visual-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .visual-image { min-height: 470px; }
-      .visual-copy { min-height: auto; }
-
-      .fleet-grid { grid-template-columns: 1fr 1fr; }
-      .fleet-copy { padding: 35px; }
+      .metrics-grid, .company-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .visual-grid { grid-template-columns: 1fr; }
+      .visual-image { min-height: 400px; }
+      .fleet-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 720px) {
-      .container { width: min(calc(100% - 36px), var(--max)); }
-
-      .nav { min-height: 68px; }
-      .nav-links { top: 68px; left: 18px; right: 18px; }
-      .brand-name { font-size: 16px; }
-
-      .hero {
-        min-height: 700px;
-      }
-
-      .hero-content {
-        padding-top: 125px;
-        padding-bottom: 145px;
-      }
-
-      .hero-media img {
-        object-position: 63% center;
-      }
-
-      .hero::after {
-        background: linear-gradient(90deg,
-          rgba(3,29,50,.95) 0%,
-          rgba(3,29,50,.78) 58%,
-          rgba(3,29,50,.40) 100%);
-      }
-
-      .hero h1 { font-size: clamp(43px, 13vw, 62px); }
-
-      .hero-trust {
-        min-height: 108px;
-      }
-
-      .trust-item {
-        padding: 10px 14px;
-      }
-
-      .trust-item:first-child { padding-left: 0; }
-
-      .metrics {
-        padding: 38px 0;
-      }
-
-      .metrics-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 24px 0;
-      }
-
-      .metric:nth-child(2) {
-        border-right: 0;
-      }
-
-      .metric:nth-child(3),
-      .metric:nth-child(4) {
-        padding-top: 20px;
-        border-top: 1px solid var(--line);
-      }
-
+      .services, .company, .fleet, .contact { padding: 60px 0; }
+      .hero-content { padding-top: 120px; padding-bottom: 130px; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .metrics-grid { grid-template-columns: 1fr 1fr; gap: 20px 0; }
+      .metric:nth-child(2) { border-right: 0; }
+      .metric:nth-child(3), .metric:nth-child(4) { padding-top: 15px; border-top: 1px solid var(--line); }
       .metric:nth-child(3) { padding-left: 0; }
-
-      .metric:nth-child(4) {
-        padding-left: 30px;
-        padding-right: 0;
-      }
-
-      .services,
-      .company,
-      .fleet,
-      .contact {
-        padding: 78px 0;
-      }
-
-      .service-grid,
-      .company-grid,
-      .fleet-grid,
-      .contact-grid,
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .company-grid { gap: 40px; }
-
-      .company-list {
-        grid-template-columns: 1fr;
-      }
-
-      .company-image img { aspect-ratio: 4 / 3; }
-
-      .visual-image { min-height: 330px; }
-      .visual-copy { padding: 65px 24px; }
-
-      .fleet-image img { min-height: 340px; }
-
-      .fleet-copy { padding: 32px 25px; }
-
-      .contact-grid { gap: 42px; }
-      .form-card { padding: 25px 20px; }
-
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      .service-grid, .company-list, .form-grid { grid-template-columns: 1fr; }
+      .fleet-copy, .form-card { padding: 24px 20px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      *, *::before, *::after {
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: .01ms !important;
-      }
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
     }
   </style>
 </head>
@@ -1085,7 +504,6 @@
   </header>
 
   <main>
-
     <!-- HERO -->
     <section class="hero" id="inicio">
       <div class="hero-media">
@@ -1095,17 +513,8 @@
       <div class="container">
         <div class="hero-content reveal">
           <div class="eyebrow">Logística y distribución</div>
-
-          <h1>
-            Logística que<br>
-            <span>mueve tu negocio.</span>
-          </h1>
-
-          <p class="hero-copy">
-            Soluciones integrales de distribución urbana, almacenamiento
-            y operación logística para empresas que necesitan eficiencia,
-            cumplimiento y una estructura preparada para crecer.
-          </p>
+          <h1>Logística que<br><span>mueve tu negocio.</span></h1>
+          <p class="hero-copy">Soluciones integrales de distribución urbana, almacenamiento y operación logística para empresas que necesitan eficiencia, cumplimiento y una estructura preparada para crecer.</p>
 
           <div class="hero-actions">
             <a href="#contacto" class="btn btn-primary">
@@ -1114,7 +523,6 @@
                 <path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </a>
-
             <a href="#servicios" class="btn btn-ghost">Conocer servicios</a>
           </div>
         </div>
@@ -1122,22 +530,10 @@
 
       <div class="hero-bottom">
         <div class="container hero-trust">
-          <div class="trust-item">
-            <span class="trust-value">+1.500 m²</span>
-            <span class="trust-label">Predio logístico</span>
-          </div>
-          <div class="trust-item">
-            <span class="trust-value">4</span>
-            <span class="trust-label">Camiones propios</span>
-          </div>
-          <div class="trust-item">
-            <span class="trust-value">24 hs</span>
-            <span class="trust-label">Seguridad K.S.</span>
-          </div>
-          <div class="trust-item">
-            <span class="trust-value">Canning</span>
-            <span class="trust-label">Ubicación estratégica</span>
-          </div>
+          <div class="trust-item"><span class="trust-value">+1.500 m²</span><span class="trust-label">Predio logístico</span></div>
+          <div class="trust-item"><span class="trust-value">4</span><span class="trust-label">Camiones propios</span></div>
+          <div class="trust-item"><span class="trust-value">24 hs</span><span class="trust-label">Seguridad K.S.</span></div>
+          <div class="trust-item"><span class="trust-value">Canning</span><span class="trust-label">Ubicación estratégica</span></div>
         </div>
       </div>
     </section>
@@ -1145,22 +541,10 @@
     <!-- METRICS -->
     <section class="metrics" aria-label="Datos de la empresa">
       <div class="container metrics-grid reveal">
-        <div class="metric">
-          <strong>+1.500</strong>
-          <span>m² de infraestructura logística</span>
-        </div>
-        <div class="metric">
-          <strong>4</strong>
-          <span>unidades de transporte propias</span>
-        </div>
-        <div class="metric">
-          <strong>24 hs</strong>
-          <span>seguridad K.S.</span>
-        </div>
-        <div class="metric">
-          <strong>100%</strong>
-          <span>compromiso con la operación</span>
-        </div>
+        <div class="metric"><strong>+1.500</strong><span>m² de infraestructura logística</span></div>
+        <div class="metric"><strong>4</strong><span>unidades de transporte propias</span></div>
+        <div class="metric"><strong>24 hs</strong><span>seguridad K.S.</span></div>
+        <div class="metric"><strong>100%</strong><span>compromiso con la operación</span></div>
       </div>
     </section>
 
@@ -1170,14 +554,10 @@
         <div class="section-head center reveal">
           <div class="eyebrow">Lo que hacemos</div>
           <h2>Una operación integral, de punta a punta.</h2>
-          <p>
-            Integramos almacenamiento, preparación, distribución y soporte
-            operativo para simplificar la cadena logística de nuestros clientes.
-          </p>
+          <p>Integramos almacenamiento, preparación, distribución y soporte operativo para simplificar la cadena logística de nuestros clientes.</p>
         </div>
 
         <div class="service-grid">
-
           <article class="service-card reveal">
             <img src="flota.jpeg" alt="Camión de distribución frente al predio logístico" loading="lazy">
             <div class="service-content">
@@ -1213,7 +593,6 @@
               <p>Adaptamos nuestra estructura y recursos a las necesidades particulares de cada operación y cliente.</p>
             </div>
           </article>
-
         </div>
       </div>
     </section>
@@ -1221,31 +600,12 @@
     <!-- COMPANY -->
     <section class="company" id="empresa">
       <div class="container company-grid">
-
         <div class="company-copy reveal">
           <div class="eyebrow">Nuestra estructura</div>
-
-          <h2>
-            Infraestructura real.<br>
-            <span>Capacidad para crecer.</span>
-          </h2>
-
-          <p>
-            Contamos con una infraestructura diseñada para brindar soluciones
-            eficientes de almacenamiento y distribución.
-          </p>
-
-          <p>
-            Nuestro predio logístico se encuentra ubicado en
-            <strong>Canning, sobre Perito Moreno 554</strong>, con una superficie
-            superior a los <strong>1.500 m²</strong>.
-          </p>
-
-          <p>
-            Combinamos infraestructura, recursos humanos y una flota propia
-            con una red de transporte tercerizado para ofrecer un servicio
-            confiable y adaptable.
-          </p>
+          <h2>Infraestructura real.<br><span>Capacidad para crecer.</span></h2>
+          <p>Contamos con una infraestructura diseñada para brindar soluciones eficientes de almacenamiento y distribución.</p>
+          <p>Nuestro predio logístico se encuentra ubicado en <strong>Canning, sobre Perito Moreno 554</strong>, con una superficie superior a los <strong>1.500 m²</strong>.</p>
+          <p>Combinamos infraestructura, recursos humanos y una flota propia con una red de transporte tercerizado para ofrecer un servicio confiable y adaptable.</p>
 
           <ul class="company-list">
             <li><span class="check">✓</span> Predio de más de 1.500 m²</li>
@@ -1264,14 +624,12 @@
             <span>Infraestructura para almacenamiento y operación logística.</span>
           </div>
         </div>
-
       </div>
     </section>
 
     <!-- OPERATION -->
     <section class="visual-operation" id="operacion">
       <div class="visual-grid">
-
         <div class="visual-image">
           <img src="exterior-porton.jpeg" alt="Predio logístico con portón de carga abierto" loading="lazy">
         </div>
@@ -1279,54 +637,33 @@
         <div class="visual-copy">
           <div>
             <div class="eyebrow">Cómo trabajamos</div>
-
             <h2>Cada etapa,<br>conectada.</h2>
-
-            <p>
-              Integramos las distintas etapas de la cadena para que la mercadería
-              avance de forma ordenada desde su ingreso hasta la entrega.
-            </p>
+            <p>Integramos las distintas etapas de la cadena para que la mercadería avance de forma ordenada desde su ingreso hasta la entrega.</p>
 
             <ol class="process-list">
               <li>
                 <span class="process-num">01</span>
-                <div>
-                  <strong>Recepción</strong>
-                  <span>Coordinamos el ingreso de la mercadería al centro logístico.</span>
-                </div>
+                <div><strong>Recepción</strong><span>Coordinamos el ingreso de la mercadería al centro logístico.</span></div>
               </li>
               <li>
                 <span class="process-num">02</span>
-                <div>
-                  <strong>Almacenamiento</strong>
-                  <span>Organizamos y administramos el stock.</span>
-                </div>
+                <div><strong>Almacenamiento</strong><span>Organizamos y administramos el stock.</span></div>
               </li>
               <li>
                 <span class="process-num">03</span>
-                <div>
-                  <strong>Preparación</strong>
-                  <span>Preparamos los pedidos según cada requerimiento.</span>
-                </div>
+                <div><strong>Preparación</strong><span>Preparamos los pedidos según cada requerimiento.</span></div>
               </li>
               <li>
                 <span class="process-num">04</span>
-                <div>
-                  <strong>Distribución</strong>
-                  <span>Despachamos con flota propia y transporte tercerizado.</span>
-                </div>
+                <div><strong>Distribución</strong><span>Despachamos con flota propia y transporte tercerizado.</span></div>
               </li>
               <li>
                 <span class="process-num">05</span>
-                <div>
-                  <strong>Entrega y gestión</strong>
-                  <span>Buscamos eficiencia, cumplimiento y calidad de servicio.</span>
-                </div>
+                <div><strong>Entrega y gestión</strong><span>Buscamos eficiencia, cumplimiento y calidad de servicio.</span></div>
               </li>
             </ol>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -1336,10 +673,7 @@
         <div class="section-head reveal">
           <div class="eyebrow">Flota y distribución</div>
           <h2>Recursos para acompañar tu operación.</h2>
-          <p>
-            Contamos con unidades propias y una red de transporte tercerizado
-            para responder a las necesidades de distribución.
-          </p>
+          <p>Contamos con unidades propias y una red de transporte tercerizado para responder a las necesidades de distribución.</p>
         </div>
 
         <div class="fleet-grid">
@@ -1349,12 +683,7 @@
 
           <div class="fleet-copy reveal">
             <h2>Una red preparada para llegar.</h2>
-
-            <p>
-              Nuestra operación combina infraestructura, flota y coordinación
-              logística para ofrecer una solución flexible según el volumen
-              y las características de cada servicio.
-            </p>
+            <p>Nuestra operación combina infraestructura, flota y coordinación logística para ofrecer una solución flexible según el volumen y las características de cada servicio.</p>
 
             <ul class="fleet-points">
               <li><span class="check">✓</span> Flota propia para distribución</li>
@@ -1370,16 +699,10 @@
     <!-- CONTACT -->
     <section class="contact" id="contacto">
       <div class="container contact-grid">
-
         <div class="contact-copy reveal">
           <div class="eyebrow">Contacto</div>
-
           <h2>Hablemos de tu <span>operación.</span></h2>
-
-          <p>
-            Contanos qué necesitás distribuir, almacenar o gestionar
-            y analizamos una solución logística para tu empresa.
-          </p>
+          <p>Contanos qué necesitás distribuir, almacenar o gestionar y analizamos una solución logística para tu empresa.</p>
 
           <div class="contact-details">
             <div class="contact-detail">
@@ -1421,15 +744,8 @@
           <h3>Solicitá información</h3>
           <p>Completá tus datos y contanos brevemente qué necesitás.</p>
 
-          <!--
-            IMPORTANTE:
-            Este formulario es visual y no envía correos por sí solo.
-            Para recibir consultas necesitás conectarlo a tu backend,
-            Formspree, EmailJS u otro servicio.
-          -->
           <form id="contactForm">
             <div class="form-grid">
-
               <div class="field">
                 <label for="nombre">Nombre / Empresa</label>
                 <input id="nombre" name="nombre" type="text" placeholder="Tu nombre o empresa" required>
@@ -1454,7 +770,6 @@
                 <label for="mensaje">Necesidad logística</label>
                 <textarea id="mensaje" name="mensaje" placeholder="Contanos brevemente sobre tu operación..." required></textarea>
               </div>
-
             </div>
 
             <button class="btn btn-primary" type="submit">
@@ -1469,10 +784,8 @@
             </div>
           </form>
         </div>
-
       </div>
     </section>
-
   </main>
 
   <footer>
@@ -1483,17 +796,13 @@
   </footer>
 
   <script>
-    // Header al hacer scroll
+    // Header Scroll
     const header = document.getElementById("header");
-
-    function updateHeader() {
-      header.classList.toggle("scrolled", window.scrollY > 10);
-    }
-
+    const updateHeader = () => header.classList.toggle("scrolled", window.scrollY > 10);
     updateHeader();
     window.addEventListener("scroll", updateHeader, { passive: true });
 
-    // Menú móvil
+    // Menu Mobile
     const menuBtn = document.getElementById("menuBtn");
     const navLinks = document.getElementById("navLinks");
 
@@ -1509,9 +818,8 @@
       });
     });
 
-    // Animaciones suaves al entrar en pantalla
+    // Reveal Observer
     const revealItems = document.querySelectorAll(".reveal");
-
     if ("IntersectionObserver" in window) {
       const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
@@ -1521,44 +829,30 @@
           }
         });
       }, { threshold: 0.12 });
-
       revealItems.forEach(item => observer.observe(item));
     } else {
       revealItems.forEach(item => item.classList.add("visible"));
     }
 
-    // Formulario: prepara un correo sin inventar una dirección de destino.
-    // REEMPLAZÁ "TU_EMAIL@DOMINIO.COM" por el email real de la empresa.
+    // Formulario Mailto
     const contactForm = document.getElementById("contactForm");
     const formNote = document.getElementById("formNote");
 
-    contactForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      const emailDestino = "TU_EMAIL@DOMINIO.COM";
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const emailDestino = "info.distribucionesurbanas@gmail.com";
       const data = new FormData(contactForm);
 
-      const subject = encodeURIComponent(
-        "Consulta logística - " + (data.get("nombre") || "Nuevo contacto")
-      );
-
+      const subject = encodeURIComponent(`Consulta logística - ${data.get("nombre") || "Nuevo contacto"}`);
       const body = encodeURIComponent(
-        "Nombre / Empresa: " + (data.get("nombre") || "") + "\n" +
-        "Email: " + (data.get("email") || "") + "\n" +
-        "Teléfono: " + (data.get("telefono") || "") + "\n" +
-        "Servicio: " + (data.get("servicio") || "") + "\n\n" +
-        "Necesidad logística:\n" + (data.get("mensaje") || "")
+        `Nombre / Empresa: ${data.get("nombre") || ""}\n` +
+        `Email: ${data.get("email") || ""}\n` +
+        `Teléfono: ${data.get("telefono") || ""}\n` +
+        `Servicio: ${data.get("servicio") || ""}\n\n` +
+        `Necesidad logística:\n${data.get("mensaje") || ""}`
       );
 
-      if (emailDestino === "TU_EMAIL@DOMINIO.COM") {
-        formNote.textContent =
-          "El diseño está listo. Para activar el envío, reemplazá TU_EMAIL@DOMINIO.COM por el email real de la empresa.";
-        formNote.style.color = "#9a5a00";
-        return;
-      }
-
-      window.location.href =
-        "mailto:" + emailDestino + "?subject=" + subject + "&body=" + body;
+      window.location.href = `mailto:${emailDestino}?subject=${subject}&body=${body}`;
     });
   </script>
 
