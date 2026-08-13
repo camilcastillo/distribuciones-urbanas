@@ -2,28 +2,150 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Distribuciones Urbanas: soluciones integrales de logística, distribución urbana, almacenamiento y operación logística en Canning.">
-  <meta name="theme-color" content="#062b49">
-  <title>Distribuciones Urbanas | Logística y Distribución</title>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Distribuciones Urbanas: soluciones integrales de logística, distribución urbana, almacenamiento y operación logística en Canning."
+  >
+
+  <meta
+    name="keywords"
+    content="logística, distribución, distribución urbana, almacenamiento, depósito, logística integral, Canning, transporte, preparación de pedidos"
+  >
+
+  <meta
+    name="author"
+    content="Distribuciones Urbanas"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <meta
+    name="theme-color"
+    content="#062b49"
+  >
+
+  <meta
+    name="format-detection"
+    content="telephone=no"
+  >
+
+  <!-- Open Graph -->
+  <meta
+    property="og:title"
+    content="Distribuciones Urbanas | Logística y Distribución"
+  >
+
+  <meta
+    property="og:description"
+    content="Soluciones integrales de distribución, almacenamiento y operación logística para empresas."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:url"
+    content="https://distribucionesurbanas.com.ar/"
+  >
+
+  <meta
+    property="og:image"
+    content="https://distribucionesurbanas.com.ar/exterior-principal.jpeg"
+  >
+
+  <meta
+    property="og:locale"
+    content="es_AR"
+  >
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Distribuciones Urbanas | Logística y Distribución"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Soluciones integrales de logística, distribución y almacenamiento."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://distribucionesurbanas.com.ar/exterior-principal.jpeg"
+  >
+
+  <link
+    rel="canonical"
+    href="https://distribucionesurbanas.com.ar/"
+  >
+
+  <!-- Favicon SVG liviano -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23062b49'/%3E%3Cpath d='M12 29h23v17H12z' fill='none' stroke='%23fff' stroke-width='3.5' stroke-linejoin='round'/%3E%3Cpath d='M35 35h8l9 8v3H35z' fill='none' stroke='%23fff' stroke-width='3.5' stroke-linejoin='round'/%3E%3Ccircle cx='19' cy='49' r='4' fill='none' stroke='%23fff' stroke-width='3.5'/%3E%3Ccircle cx='44' cy='49' r='4' fill='none' stroke='%23fff' stroke-width='3.5'/%3E%3Cpath d='M8 24l9-6 8 4 9-8 22 12' fill='none' stroke='%239be33c' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+  >
+
+  <title>
+    Distribuciones Urbanas | Logística y Distribución
+  </title>
 
   <style>
+
+    /* =========================================================
+       VARIABLES
+    ========================================================= */
+
     :root {
       --navy: #062b49;
       --navy-deep: #031d32;
+
       --green: #9be33c;
       --green-dark: #7fca27;
+
       --ink: #172b3a;
       --muted: #61717d;
+
       --line: #e5ebef;
       --surface: #f5f7f8;
+
       --white: #ffffff;
-      --shadow: 0 18px 50px rgba(3, 29, 50, .10);
+
+      --shadow:
+        0 18px 50px rgba(3, 29, 50, 0.10);
+
       --radius: 18px;
+
       --max: 1180px;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     html {
       scroll-behavior: smooth;
@@ -31,830 +153,3429 @@
     }
 
     body {
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
       color: var(--ink);
       background: var(--white);
+
       line-height: 1.6;
+
       overflow-x: hidden;
+
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    img { display: block; width: 100%; height: auto; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+
+    /* =========================================================
+       CONTENEDOR
+    ========================================================= */
 
     .container {
-      width: min(calc(100% - 36px), var(--max));
+      width: min(
+        calc(100% - 36px),
+        var(--max)
+      );
+
       margin-inline: auto;
     }
+
+
+    /* =========================================================
+       EYEBROW
+    ========================================================= */
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 9px;
+
       color: var(--green-dark);
+
       font-size: 12px;
       font-weight: 800;
+
       letter-spacing: .14em;
       text-transform: uppercase;
+
       margin-bottom: 16px;
     }
 
     .eyebrow::before {
       content: "";
+
       width: 28px;
       height: 2px;
+
       background: var(--green);
+
       border-radius: 99px;
     }
 
-    .section-head { max-width: 720px; margin-bottom: 48px; }
-    .section-head.center { margin-inline: auto; text-align: center; }
-    .section-head.center .eyebrow { justify-content: center; }
+
+    /* =========================================================
+       SECTION HEAD
+    ========================================================= */
+
+    .section-head {
+      max-width: 720px;
+      margin-bottom: 48px;
+    }
+
+    .section-head.center {
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .section-head.center .eyebrow {
+      justify-content: center;
+    }
+
     .section-head h2 {
       color: var(--navy);
-      font-size: clamp(32px, 4vw, 52px);
+
+      font-size:
+        clamp(32px, 4vw, 52px);
+
       line-height: 1.05;
+
       letter-spacing: -.035em;
+
       margin-bottom: 16px;
     }
-    .section-head p { color: var(--muted); font-size: 17px; max-width: 650px; }
-    .section-head.center p { margin-inline: auto; }
 
-    /* Componente Botón */
+    .section-head p {
+      color: var(--muted);
+
+      font-size: 17px;
+
+      max-width: 650px;
+    }
+
+    .section-head.center p {
+      margin-inline: auto;
+    }
+
+
+    /* =========================================================
+       BOTONES
+    ========================================================= */
+
     .btn {
       display: inline-flex;
+
       align-items: center;
       justify-content: center;
+
       gap: 10px;
+
       min-height: 52px;
+
       padding: 0 24px;
+
       border: 0;
+
       border-radius: 9px;
+
       font-size: 14px;
       font-weight: 800;
+
       cursor: pointer;
-      transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+
+      transition:
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
     }
+
     .btn-primary {
       background: var(--green);
+
       color: var(--navy-deep);
-      box-shadow: 0 10px 28px rgba(155,227,60,.18);
+
+      box-shadow:
+        0 10px 28px rgba(155, 227, 60, .18);
     }
-    .btn-primary:hover { background: #a9eb4d; transform: translateY(-2px); }
+
+    .btn-primary:hover {
+      background: #a9eb4d;
+
+      transform: translateY(-2px);
+    }
+
     .btn-ghost {
       color: var(--white);
-      border: 1px solid rgba(255,255,255,.30);
-      background: rgba(255,255,255,.08);
+
+      border:
+        1px solid rgba(255,255,255,.30);
+
+      background:
+        rgba(255,255,255,.08);
+
       backdrop-filter: blur(8px);
     }
-    .btn-ghost:hover { background: rgba(255,255,255,.15); transform: translateY(-2px); }
 
-    /* Checkmarks list */
+    .btn-ghost:hover {
+      background:
+        rgba(255,255,255,.15);
+
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================================================
+       CHECK
+    ========================================================= */
+
     .check {
       flex: 0 0 auto;
+
       width: 20px;
       height: 20px;
+
       display: grid;
       place-items: center;
+
       border-radius: 50%;
-      background: rgba(155,227,60,.18);
+
+      background:
+        rgba(155,227,60,.18);
+
       color: var(--green-dark);
+
       font-size: 12px;
       font-weight: 900;
     }
 
-    /* Header */
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
     .site-header {
       position: fixed;
-      inset: 0 0 auto 0;
+
+      inset:
+        0 0 auto 0;
+
       z-index: 1000;
-      background: rgba(255,255,255,.94);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(6,43,73,.08);
-      transition: box-shadow .25s ease, background .25s ease;
+
+      background:
+        rgba(255,255,255,.94);
+
+      backdrop-filter:
+        blur(14px);
+
+      -webkit-backdrop-filter:
+        blur(14px);
+
+      border-bottom:
+        1px solid rgba(6,43,73,.08);
+
+      transition:
+        box-shadow .25s ease,
+        background .25s ease;
     }
+
     .site-header.scrolled {
-      box-shadow: 0 8px 30px rgba(3,29,50,.08);
-      background: rgba(255,255,255,.98);
+      box-shadow:
+        0 8px 30px rgba(3,29,50,.08);
+
+      background:
+        rgba(255,255,255,.98);
     }
+
     .nav {
       min-height: 76px;
+
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
+
       gap: 24px;
     }
-    .brand { display: inline-flex; align-items: center; gap: 11px; white-space: nowrap; }
+
+
+    /* =========================================================
+       LOGO / MARCA
+       SVG INLINE — LIVIANO
+    ========================================================= */
+
+    .brand {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 11px;
+
+      white-space: nowrap;
+    }
+
     .brand-mark {
-      width: 36px;
-      height: 36px;
-      border: 2px solid var(--green);
-      border-radius: 9px;
+      width: 42px;
+      height: 42px;
+
       display: grid;
       place-items: center;
+
       color: var(--navy);
-      background: #fbfff5;
+
+      background:
+        #fbfff5;
+
+      border:
+        1px solid rgba(155,227,60,.65);
+
+      border-radius: 10px;
+
+      overflow: hidden;
     }
-    .brand-mark svg { width: 24px; height: 24px; }
-    .brand-name { font-size: 18px; font-weight: 850; letter-spacing: -.025em; color: var(--navy); }
-    .brand-name span { color: var(--green-dark); }
-    .nav-links { display: flex; align-items: center; gap: 30px; list-style: none; }
-    .nav-links a { color: var(--navy); font-size: 14px; font-weight: 650; transition: color .2s ease; }
-    .nav-links a:hover { color: var(--green-dark); }
+
+    .brand-mark svg {
+      width: 36px;
+      height: 36px;
+
+      display: block;
+    }
+
+    .brand-name {
+      font-size: 18px;
+
+      font-weight: 850;
+
+      letter-spacing: -.025em;
+
+      color: var(--navy);
+    }
+
+    .brand-name span {
+      color: var(--green-dark);
+    }
+
+
+    /* =========================================================
+       MENU
+    ========================================================= */
+
+    .nav-links {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: flex-end;
+
+      gap: 30px;
+
+      list-style: none;
+
+      margin-left: auto;
+    }
+
+    .nav-links a {
+      color: var(--navy);
+
+      font-size: 14px;
+
+      font-weight: 650;
+
+      transition:
+        color .2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--green-dark);
+    }
+
     .nav-cta {
       display: inline-flex;
+
       align-items: center;
       justify-content: center;
+
       min-height: 44px;
+
       padding: 0 20px;
+
       border-radius: 9px;
+
       background: var(--green);
+
       color: var(--navy-deep) !important;
+
       font-weight: 800 !important;
     }
-    .nav-cta:hover { background: var(--green-dark); }
+
+    .nav-cta:hover {
+      background: var(--green-dark);
+    }
+
     .menu-btn {
       display: none;
+
       width: 44px;
       height: 44px;
-      border: 1px solid var(--line);
-      background: var(--white);
+
+      border:
+        1px solid var(--line);
+
+      background:
+        var(--white);
+
       border-radius: 10px;
+
       cursor: pointer;
+
       color: var(--navy);
     }
 
-    /* Hero */
+
+    /* =========================================================
+       HERO
+       MANTENIDO: FOTO PRINCIPAL + SOMBRA
+    ========================================================= */
+
     .hero {
       position: relative;
+
       min-height: 720px;
+
       display: flex;
+
       align-items: center;
+
       overflow: hidden;
-      background: var(--navy-deep);
+
+      background:
+        var(--navy-deep);
+
       isolation: isolate;
     }
-    .hero-media { position: absolute; inset: 0; z-index: -2; }
-    .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 52%; }
+
+    .hero-media {
+      position: absolute;
+
+      inset: 0;
+
+      z-index: -2;
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      object-position:
+        center 52%;
+    }
+
+    /* ESTA ES LA SOMBRA QUE TE GUSTABA */
+
     .hero::after {
       content: "";
+
       position: absolute;
+
       inset: 0;
+
       z-index: -1;
-      background: linear-gradient(90deg, rgba(3,29,50,.96) 0%, rgba(3,29,50,.88) 30%, rgba(3,29,50,.54) 57%, rgba(3,29,50,.12) 100%);
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(3,29,50,.96) 0%,
+          rgba(3,29,50,.88) 30%,
+          rgba(3,29,50,.54) 57%,
+          rgba(3,29,50,.12) 100%
+        );
     }
-    .hero-content { padding: 150px 0 90px; max-width: 720px; color: var(--white); }
-    .hero .eyebrow { color: var(--green); }
+
+    .hero-content {
+      padding:
+        150px 0 90px;
+
+      max-width: 720px;
+
+      color: var(--white);
+    }
+
+    .hero .eyebrow {
+      color: var(--green);
+    }
+
     .hero h1 {
-      font-size: clamp(40px, 6vw, 76px);
+      font-size:
+        clamp(40px, 6vw, 76px);
+
       line-height: .98;
+
       letter-spacing: -.055em;
+
       margin-bottom: 24px;
     }
-    .hero h1 span { color: var(--green); }
+
+    .hero h1 span {
+      color: var(--green);
+    }
+
     .hero-copy {
       max-width: 610px;
-      color: rgba(255,255,255,.86);
-      font-size: clamp(16px, 2vw, 20px);
+
+      color:
+        rgba(255,255,255,.86);
+
+      font-size:
+        clamp(16px, 2vw, 20px);
+
       line-height: 1.6;
+
       margin-bottom: 34px;
     }
-    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+
+    .hero-actions {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      align-items: center;
+
+      gap: 14px;
+    }
+
     .hero-bottom {
       position: absolute;
-      inset: auto 0 0 0;
-      border-top: 1px solid rgba(255,255,255,.12);
-      background: rgba(3,29,50,.42);
-      backdrop-filter: blur(8px);
+
+      inset:
+        auto 0 0 0;
+
+      border-top:
+        1px solid rgba(255,255,255,.12);
+
+      background:
+        rgba(3,29,50,.42);
+
+      backdrop-filter:
+        blur(8px);
     }
-    .hero-trust { min-height: 78px; display: grid; grid-template-columns: repeat(4, 1fr); }
+
+    .hero-trust {
+      min-height: 78px;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+    }
+
     .trust-item {
       display: flex;
+
       flex-direction: column;
+
       justify-content: center;
-      padding: 12px 20px;
-      border-right: 1px solid rgba(255,255,255,.12);
+
+      padding:
+        12px 20px;
+
+      border-right:
+        1px solid rgba(255,255,255,.12);
     }
-    .trust-item:first-child { padding-left: 0; }
-    .trust-item:last-child { border-right: 0; }
-    .trust-value { color: var(--white); font-size: 22px; line-height: 1; font-weight: 850; }
-    .trust-label { color: rgba(255,255,255,.65); font-size: 12px; margin-top: 5px; }
 
-    /* Section Spacings */
-    .services, .company, .fleet, .contact { padding: 100px 0; }
+    .trust-item:first-child {
+      padding-left: 0;
+    }
 
-    /* Metrics */
-    .metrics { padding: 54px 0; background: var(--white); border-bottom: 1px solid var(--line); }
-    .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
-    .metric { padding: 8px 30px; border-right: 1px solid var(--line); }
-    .metric:first-child { padding-left: 0; }
-    .metric:last-child { border-right: 0; padding-right: 0; }
+    .trust-item:last-child {
+      border-right: 0;
+    }
+
+    .trust-value {
+      color: var(--white);
+
+      font-size: 22px;
+
+      line-height: 1;
+
+      font-weight: 850;
+    }
+
+    .trust-label {
+      color:
+        rgba(255,255,255,.65);
+
+      font-size: 12px;
+
+      margin-top: 5px;
+    }
+
+
+    /* =========================================================
+       METRICS
+    ========================================================= */
+
+    .metrics {
+      padding: 54px 0;
+
+      background:
+        var(--white);
+
+      border-bottom:
+        1px solid var(--line);
+    }
+
+    .metrics-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+    }
+
+    .metric {
+      padding:
+        8px 30px;
+
+      border-right:
+        1px solid var(--line);
+    }
+
+    .metric:first-child {
+      padding-left: 0;
+    }
+
+    .metric:last-child {
+      border-right: 0;
+      padding-right: 0;
+    }
+
     .metric strong {
       display: block;
+
       color: var(--navy);
+
       font-size: 38px;
+
       line-height: 1;
+
       letter-spacing: -.04em;
+
       margin-bottom: 7px;
     }
-    .metric span { color: var(--muted); font-size: 13px; font-weight: 650; }
 
-    /* Services */
-    .services { background: var(--surface); }
-    .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+    .metric span {
+      color: var(--muted);
+
+      font-size: 13px;
+
+      font-weight: 650;
+    }
+
+
+    /* =========================================================
+       SERVICES
+    ========================================================= */
+
+    .services {
+      padding: 100px 0;
+
+      background:
+        var(--surface);
+    }
+
+    .service-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 22px;
+    }
+
     .service-card {
       position: relative;
+
       min-height: 290px;
+
       overflow: hidden;
-      border-radius: var(--radius);
-      background: var(--navy);
+
+      border-radius:
+        var(--radius);
+
+      background:
+        var(--navy);
+
       color: var(--white);
-      box-shadow: var(--shadow);
+
+      box-shadow:
+        var(--shadow);
     }
+
     .service-card img {
       position: absolute;
+
       inset: 0;
+
+      width: 100%;
       height: 100%;
+
       object-fit: cover;
-      transition: transform .5s ease;
+
+      transition:
+        transform .5s ease;
     }
-    .service-card:hover img { transform: scale(1.04); }
+
+    .service-card:hover img {
+      transform:
+        scale(1.04);
+    }
+
     .service-card::after {
       content: "";
+
       position: absolute;
+
       inset: 0;
-      background: linear-gradient(180deg, rgba(3,29,50,.08), rgba(3,29,50,.92));
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(3,29,50,.08),
+          rgba(3,29,50,.92)
+        );
     }
+
     .service-content {
       position: relative;
+
       z-index: 1;
+
       min-height: 290px;
+
       display: flex;
+
       flex-direction: column;
+
       justify-content: flex-end;
+
       padding: 30px;
     }
-    .service-number { color: var(--green); font-size: 12px; font-weight: 850; letter-spacing: .15em; margin-bottom: 8px; }
-    .service-content h3 { font-size: 28px; line-height: 1.05; margin-bottom: 9px; letter-spacing: -.025em; }
-    .service-content p { color: rgba(255,255,255,.78); max-width: 500px; font-size: 14px; }
 
-    /* Company */
-    .company { background: var(--white); }
-    .company-grid { display: grid; grid-template-columns: .92fr 1.08fr; gap: 76px; align-items: center; }
+    .service-number {
+      color: var(--green);
+
+      font-size: 12px;
+
+      font-weight: 850;
+
+      letter-spacing: .15em;
+
+      margin-bottom: 8px;
+    }
+
+    .service-content h3 {
+      font-size: 28px;
+
+      line-height: 1.05;
+
+      margin-bottom: 9px;
+
+      letter-spacing: -.025em;
+    }
+
+    .service-content p {
+      color:
+        rgba(255,255,255,.78);
+
+      max-width: 500px;
+
+      font-size: 14px;
+    }
+
+
+    /* =========================================================
+       COMPANY
+    ========================================================= */
+
+    .company {
+      padding: 100px 0;
+
+      background:
+        var(--white);
+    }
+
+    .company-grid {
+      display: grid;
+
+      grid-template-columns:
+        .92fr 1.08fr;
+
+      gap: 76px;
+
+      align-items: center;
+    }
+
     .company-copy h2 {
       color: var(--navy);
-      font-size: clamp(32px, 4.5vw, 58px);
+
+      font-size:
+        clamp(32px, 4.5vw, 58px);
+
       line-height: 1.02;
+
       letter-spacing: -.045em;
+
       margin-bottom: 22px;
     }
-    .company-copy h2 span { color: var(--green-dark); }
-    .company-copy > p { color: var(--muted); font-size: 17px; margin-bottom: 18px; }
-    .company-list { display: grid; grid-template-columns: 1fr 1fr; gap: 13px 24px; list-style: none; margin-top: 30px; }
-    .company-list li { display: flex; gap: 10px; color: var(--ink); font-size: 14px; font-weight: 700; }
-    .company-image { position: relative; border-radius: 22px; overflow: hidden; box-shadow: var(--shadow); }
-    .company-image img { aspect-ratio: 4 / 3; object-fit: cover; }
+
+    .company-copy h2 span {
+      color: var(--green-dark);
+    }
+
+    .company-copy > p {
+      color: var(--muted);
+
+      font-size: 17px;
+
+      margin-bottom: 18px;
+    }
+
+    .company-list {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap:
+        13px 24px;
+
+      list-style: none;
+
+      margin-top: 30px;
+    }
+
+    .company-list li {
+      display: flex;
+
+      gap: 10px;
+
+      color: var(--ink);
+
+      font-size: 14px;
+
+      font-weight: 700;
+    }
+
+    .company-image {
+      position: relative;
+
+      border-radius: 22px;
+
+      overflow: hidden;
+
+      box-shadow:
+        var(--shadow);
+    }
+
+    .company-image img {
+      aspect-ratio: 4 / 3;
+
+      object-fit: cover;
+    }
+
     .image-caption {
       position: absolute;
+
       left: 20px;
       bottom: 20px;
-      max-width: 290px;
-      padding: 17px 18px;
-      border-radius: 12px;
-      color: var(--white);
-      background: rgba(3,29,50,.86);
-      backdrop-filter: blur(10px);
-    }
-    .image-caption strong { display: block; font-size: 17px; line-height: 1.2; margin-bottom: 3px; }
-    .image-caption span { color: rgba(255,255,255,.7); font-size: 12px; }
 
-    /* Visual Operation */
-    .visual-operation { background: var(--navy-deep); color: var(--white); }
-    .visual-grid { display: grid; grid-template-columns: 1.05fr .95fr; min-height: 590px; }
-    .visual-image { min-height: 590px; overflow: hidden; }
-    .visual-image img { height: 100%; object-fit: cover; }
-    .visual-copy { display: flex; align-items: center; padding: 80px clamp(24px, 6vw, 90px); }
-    .visual-copy .eyebrow { color: var(--green); }
-    .visual-copy h2 { font-size: clamp(32px, 4.2vw, 56px); line-height: 1.02; letter-spacing: -.045em; margin-bottom: 18px; }
-    .visual-copy > div > p { color: rgba(255,255,255,.72); font-size: 16px; max-width: 520px; margin-bottom: 30px; }
-    .process-list { list-style: none; }
+      max-width: 290px;
+
+      padding:
+        17px 18px;
+
+      border-radius: 12px;
+
+      color: var(--white);
+
+      background:
+        rgba(3,29,50,.86);
+
+      backdrop-filter:
+        blur(10px);
+    }
+
+    .image-caption strong {
+      display: block;
+
+      font-size: 17px;
+
+      line-height: 1.2;
+
+      margin-bottom: 3px;
+    }
+
+    .image-caption span {
+      color:
+        rgba(255,255,255,.7);
+
+      font-size: 12px;
+    }
+
+
+    /* =========================================================
+       OPERATION
+    ========================================================= */
+
+    .visual-operation {
+      background:
+        var(--navy-deep);
+
+      color:
+        var(--white);
+    }
+
+    .visual-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.05fr .95fr;
+
+      min-height: 590px;
+    }
+
+    .visual-image {
+      min-height: 590px;
+
+      overflow: hidden;
+    }
+
+    .visual-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+    .visual-copy {
+      display: flex;
+
+      align-items: center;
+
+      padding:
+        80px clamp(24px, 6vw, 90px);
+    }
+
+    .visual-copy .eyebrow {
+      color: var(--green);
+    }
+
+    .visual-copy h2 {
+      font-size:
+        clamp(32px, 4.2vw, 56px);
+
+      line-height: 1.02;
+
+      letter-spacing: -.045em;
+
+      margin-bottom: 18px;
+    }
+
+    .visual-copy > div > p {
+      color:
+        rgba(255,255,255,.72);
+
+      font-size: 16px;
+
+      max-width: 520px;
+
+      margin-bottom: 30px;
+    }
+
+    .process-list {
+      list-style: none;
+    }
+
     .process-list li {
       display: grid;
-      grid-template-columns: 48px 1fr;
-      gap: 14px;
-      padding: 17px 0;
-      border-top: 1px solid rgba(255,255,255,.12);
-    }
-    .process-list li:last-child { border-bottom: 1px solid rgba(255,255,255,.12); }
-    .process-num { color: var(--green); font-size: 12px; font-weight: 850; padding-top: 3px; }
-    .process-list strong { display: block; font-size: 15px; margin-bottom: 2px; }
-    .process-list span { color: rgba(255,255,255,.58); font-size: 13px; }
 
-    /* Fleet */
-    .fleet { background: var(--surface); }
-    .fleet-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
-    .fleet-image { overflow: hidden; border-radius: var(--radius); background: var(--navy); box-shadow: var(--shadow); }
-    .fleet-image img { height: 100%; min-height: 460px; object-fit: cover; }
+      grid-template-columns:
+        48px 1fr;
+
+      gap: 14px;
+
+      padding: 17px 0;
+
+      border-top:
+        1px solid rgba(255,255,255,.12);
+    }
+
+    .process-list li:last-child {
+      border-bottom:
+        1px solid rgba(255,255,255,.12);
+    }
+
+    .process-num {
+      color: var(--green);
+
+      font-size: 12px;
+
+      font-weight: 850;
+
+      padding-top: 3px;
+    }
+
+    .process-list strong {
+      display: block;
+
+      font-size: 15px;
+
+      margin-bottom: 2px;
+    }
+
+    .process-list span {
+      color:
+        rgba(255,255,255,.58);
+
+      font-size: 13px;
+    }
+
+
+    /* =========================================================
+       FLEET
+    ========================================================= */
+
+    .fleet {
+      padding: 100px 0;
+
+      background:
+        var(--surface);
+    }
+
+    .fleet-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 26px;
+    }
+
+    .fleet-image {
+      overflow: hidden;
+
+      border-radius:
+        var(--radius);
+
+      background:
+        var(--navy);
+
+      box-shadow:
+        var(--shadow);
+    }
+
+    .fleet-image img {
+      width: 100%;
+
+      height: 100%;
+
+      min-height: 460px;
+
+      object-fit: cover;
+    }
+
     .fleet-copy {
       padding: 52px;
-      border-radius: var(--radius);
-      background: var(--white);
-      box-shadow: var(--shadow);
+
+      border-radius:
+        var(--radius);
+
+      background:
+        var(--white);
+
+      box-shadow:
+        var(--shadow);
+
       display: flex;
+
       flex-direction: column;
+
       justify-content: center;
     }
-    .fleet-copy h2 { color: var(--navy); font-size: clamp(30px, 4vw, 48px); line-height: 1.05; letter-spacing: -.04em; margin-bottom: 17px; }
-    .fleet-copy p { color: var(--muted); font-size: 16px; margin-bottom: 25px; }
-    .fleet-points { list-style: none; display: grid; gap: 12px; }
-    .fleet-points li { display: flex; gap: 11px; align-items: flex-start; color: var(--ink); font-size: 14px; font-weight: 700; }
 
-    /* Contact */
-    .contact { background: var(--navy); color: var(--white); }
-    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 75px; align-items: center; }
-    .contact-copy h2 { font-size: clamp(35px, 5vw, 62px); line-height: 1; letter-spacing: -.045em; margin-bottom: 20px; }
-    .contact-copy h2 span { color: var(--green); }
-    .contact-copy > p { color: rgba(255,255,255,.7); font-size: 16px; max-width: 480px; margin-bottom: 28px; }
-    .contact-details { display: grid; gap: 14px; }
-    .contact-detail { display: flex; gap: 12px; align-items: flex-start; color: rgba(255,255,255,.82); font-size: 14px; }
-    .contact-detail svg { flex: 0 0 auto; width: 20px; height: 20px; color: var(--green); margin-top: 1px; }
+    .fleet-copy h2 {
+      color: var(--navy);
 
-    /* Form */
-    .form-card { padding: 34px; border-radius: 18px; background: var(--white); color: var(--ink); box-shadow: 0 24px 70px rgba(0,0,0,.18); }
-    .form-card h3 { color: var(--navy); font-size: 24px; margin-bottom: 4px; }
-    .form-card > p { color: var(--muted); font-size: 13px; margin-bottom: 23px; }
-    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
-    .field { margin-bottom: 13px; }
-    .field.full { grid-column: 1 / -1; }
-    .field label { display: block; color: var(--navy); font-size: 12px; font-weight: 800; margin-bottom: 6px; }
-    .field input, .field textarea {
-      width: 100%;
-      border: 1px solid #dce4e8;
-      border-radius: 8px;
-      background: #fbfcfd;
+      font-size:
+        clamp(30px, 4vw, 48px);
+
+      line-height: 1.05;
+
+      letter-spacing: -.04em;
+
+      margin-bottom: 17px;
+    }
+
+    .fleet-copy p {
+      color: var(--muted);
+
+      font-size: 16px;
+
+      margin-bottom: 25px;
+    }
+
+    .fleet-points {
+      list-style: none;
+
+      display: grid;
+
+      gap: 12px;
+    }
+
+    .fleet-points li {
+      display: flex;
+
+      gap: 11px;
+
+      align-items: flex-start;
+
       color: var(--ink);
-      padding: 12px 13px;
-      font: inherit;
+
       font-size: 14px;
+
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       CONTACTO
+    ========================================================= */
+
+    .contact {
+      padding: 100px 0;
+
+      background:
+        var(--navy);
+
+      color:
+        var(--white);
+    }
+
+    .contact-grid {
+      display: grid;
+
+      grid-template-columns:
+        .9fr 1.1fr;
+
+      gap: 75px;
+
+      align-items: center;
+    }
+
+    .contact-copy h2 {
+      font-size:
+        clamp(35px, 5vw, 62px);
+
+      line-height: 1;
+
+      letter-spacing: -.045em;
+
+      margin-bottom: 20px;
+    }
+
+    .contact-copy h2 span {
+      color: var(--green);
+    }
+
+    .contact-copy > p {
+      color:
+        rgba(255,255,255,.7);
+
+      font-size: 16px;
+
+      max-width: 480px;
+
+      margin-bottom: 28px;
+    }
+
+    .contact-details {
+      display: grid;
+
+      gap: 14px;
+    }
+
+    .contact-detail {
+      display: flex;
+
+      gap: 12px;
+
+      align-items: flex-start;
+
+      color:
+        rgba(255,255,255,.82);
+
+      font-size: 14px;
+    }
+
+    .contact-detail svg {
+      flex:
+        0 0 auto;
+
+      width: 20px;
+      height: 20px;
+
+      color: var(--green);
+
+      margin-top: 1px;
+    }
+
+
+    /* =========================================================
+       FORMULARIO
+    ========================================================= */
+
+    .form-card {
+      padding: 34px;
+
+      border-radius: 18px;
+
+      background:
+        var(--white);
+
+      color:
+        var(--ink);
+
+      box-shadow:
+        0 24px 70px rgba(0,0,0,.18);
+    }
+
+    .form-card h3 {
+      color: var(--navy);
+
+      font-size: 24px;
+
+      margin-bottom: 4px;
+    }
+
+    .form-card > p {
+      color: var(--muted);
+
+      font-size: 13px;
+
+      margin-bottom: 23px;
+    }
+
+    .form-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 13px;
+    }
+
+    .field {
+      margin-bottom: 13px;
+    }
+
+    .field.full {
+      grid-column:
+        1 / -1;
+    }
+
+    .field label {
+      display: block;
+
+      color: var(--navy);
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      margin-bottom: 6px;
+    }
+
+    .field input,
+    .field textarea {
+      width: 100%;
+
+      border:
+        1px solid #dce4e8;
+
+      border-radius: 8px;
+
+      background:
+        #fbfcfd;
+
+      color:
+        var(--ink);
+
+      padding:
+        12px 13px;
+
+      font: inherit;
+
+      font-size: 14px;
+
       outline: none;
-      transition: border-color .2s ease, box-shadow .2s ease;
+
+      transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
     }
-    .field input { height: 45px; }
-    .field textarea { min-height: 110px; resize: vertical; }
-    .field input:focus, .field textarea:focus {
-      border-color: var(--green-dark);
-      box-shadow: 0 0 0 3px rgba(155,227,60,.18);
+
+    .field input {
+      height: 45px;
     }
-    .form-card .btn { width: 100%; margin-top: 3px; }
-    .form-note { color: #7a8790; font-size: 11px; margin-top: 10px; text-align: center; }
 
-    /* Footer */
-    footer { padding: 28px 0; background: var(--navy-deep); color: rgba(255,255,255,.54); }
-    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; font-size: 12px; }
-    .footer-brand { color: var(--white); font-weight: 800; }
-    .footer-brand span { color: var(--green); }
+    .field textarea {
+      min-height: 110px;
 
-    /* Scroll Animations */
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+      resize: vertical;
+    }
 
-    /* Responsive Mobile Optimizations */
+    .field input:focus,
+    .field textarea:focus {
+      border-color:
+        var(--green-dark);
+
+      box-shadow:
+        0 0 0 3px
+        rgba(155,227,60,.18);
+    }
+
+    .form-card .btn {
+      width: 100%;
+
+      margin-top: 3px;
+    }
+
+    .form-note {
+      color: #7a8790;
+
+      font-size: 11px;
+
+      margin-top: 10px;
+
+      text-align: center;
+    }
+
+
+    /* =========================================================
+       WHATSAPP
+    ========================================================= */
+
+    .whatsapp-float {
+      position: fixed;
+
+      right: 24px;
+      bottom: 24px;
+
+      z-index: 999;
+
+      width: 62px;
+      height: 62px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background:
+        #25D366;
+
+      color: #fff;
+
+      box-shadow:
+        0 12px 30px
+        rgba(0,0,0,.22);
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform:
+        translateY(-4px)
+        scale(1.03);
+
+      box-shadow:
+        0 16px 35px
+        rgba(0,0,0,.27);
+    }
+
+    .whatsapp-float svg {
+      width: 34px;
+      height: 34px;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      padding: 28px 0;
+
+      background:
+        var(--navy-deep);
+
+      color:
+        rgba(255,255,255,.54);
+    }
+
+    .footer-inner {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      font-size: 12px;
+    }
+
+    .footer-brand {
+      color: var(--white);
+
+      font-weight: 800;
+    }
+
+    .footer-brand span {
+      color: var(--green);
+    }
+
+
+    /* =========================================================
+       ANIMACIONES
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+
+      transform:
+        translateY(20px);
+
+      transition:
+        opacity .7s ease,
+        transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+
+      transform:
+        translateY(0);
+    }
+
+
+    /* =========================================================
+       TABLET
+    ========================================================= */
+
     @media (max-width: 980px) {
+
+      .nav {
+        position: relative;
+      }
+
       .nav-links {
         position: absolute;
+
         top: 76px;
-        left: 18px;
-        right: 18px;
+
+        left: 0;
+        right: 0;
+
         display: none;
+
         flex-direction: column;
+
         align-items: stretch;
+
+        gap: 0;
+
         padding: 10px;
-        border: 1px solid var(--line);
+
+        border:
+          1px solid var(--line);
+
         border-radius: 14px;
-        background: var(--white);
-        box-shadow: var(--shadow);
+
+        background:
+          var(--white);
+
+        box-shadow:
+          var(--shadow);
+
+        margin-left: 0;
       }
-      .nav-links.open { display: flex; }
-      .nav-links li a { display: block; padding: 13px 14px; }
-      .nav-cta { text-align: center; }
-      .menu-btn { display: grid; place-items: center; }
 
-      .hero { min-height: 680px; }
-      .hero-trust { grid-template-columns: repeat(2, 1fr); }
-      .trust-item { border-bottom: 1px solid rgba(255,255,255,.12); }
-      .trust-item:nth-child(2) { border-right: 0; }
-      .trust-item:nth-child(3), .trust-item:nth-child(4) { border-bottom: 0; }
+      .nav-links.open {
+        display: flex;
+      }
 
-      .metrics-grid, .company-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-      .visual-grid { grid-template-columns: 1fr; }
-      .visual-image { min-height: 400px; }
-      .fleet-grid { grid-template-columns: 1fr; }
+      .nav-links li a {
+        display: block;
+
+        padding:
+          13px 14px;
+      }
+
+      .nav-cta {
+        text-align: center;
+
+        margin-top: 4px;
+      }
+
+      .menu-btn {
+        display: grid;
+
+        place-items: center;
+
+        margin-left: auto;
+      }
+
+      .hero {
+        min-height: 680px;
+      }
+
+      .hero-trust {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .trust-item {
+        border-bottom:
+          1px solid
+          rgba(255,255,255,.12);
+      }
+
+      .trust-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .trust-item:nth-child(3),
+      .trust-item:nth-child(4) {
+        border-bottom: 0;
+      }
+
+      .metrics-grid,
+      .company-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+      }
+
+      .visual-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .visual-image {
+        min-height: 400px;
+      }
+
+      .fleet-grid {
+        grid-template-columns: 1fr;
+      }
     }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
 
     @media (max-width: 720px) {
-      .services, .company, .fleet, .contact { padding: 60px 0; }
-      .hero-content { padding-top: 120px; padding-bottom: 130px; }
-      .hero-actions { flex-direction: column; align-items: stretch; }
-      .metrics-grid { grid-template-columns: 1fr 1fr; gap: 20px 0; }
-      .metric:nth-child(2) { border-right: 0; }
-      .metric:nth-child(3), .metric:nth-child(4) { padding-top: 15px; border-top: 1px solid var(--line); }
-      .metric:nth-child(3) { padding-left: 0; }
-      .service-grid, .company-list, .form-grid { grid-template-columns: 1fr; }
-      .fleet-copy, .form-card { padding: 24px 20px; }
-      .footer-inner { flex-direction: column; align-items: flex-start; }
+
+      .container {
+        width:
+          min(
+            calc(100% - 28px),
+            var(--max)
+          );
+      }
+
+      .brand-name {
+        font-size: 15px;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+      }
+
+      .brand-mark svg {
+        width: 32px;
+        height: 32px;
+      }
+
+      .services,
+      .company,
+      .fleet,
+      .contact {
+        padding:
+          60px 0;
+      }
+
+      .hero {
+        min-height: 680px;
+      }
+
+      .hero-content {
+        padding-top: 120px;
+
+        padding-bottom: 130px;
+      }
+
+      .hero h1 {
+        font-size:
+          clamp(40px, 13vw, 58px);
+      }
+
+      .hero-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .metrics-grid {
+        grid-template-columns:
+          1fr 1fr;
+
+        gap:
+          20px 0;
+      }
+
+      .metric:nth-child(2) {
+        border-right: 0;
+      }
+
+      .metric:nth-child(3),
+      .metric:nth-child(4) {
+        padding-top: 15px;
+
+        border-top:
+          1px solid var(--line);
+      }
+
+      .metric:nth-child(3) {
+        padding-left: 0;
+      }
+
+      .metric strong {
+        font-size: 30px;
+      }
+
+      .service-grid,
+      .company-list,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .fleet-copy,
+      .form-card {
+        padding:
+          24px 20px;
+      }
+
+      .visual-copy {
+        padding:
+          60px 24px;
+      }
+
+      .visual-image {
+        min-height: 320px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+      .whatsapp-float {
+        right: 17px;
+        bottom: 17px;
+
+        width: 56px;
+        height: 56px;
+      }
+
+      .whatsapp-float svg {
+        width: 30px;
+        height: 30px;
+      }
     }
 
+
+    /* =========================================================
+       REDUCED MOTION
+    ========================================================= */
+
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+
+        transition-duration: .01ms !important;
+      }
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <header class="site-header" id="header">
+
+  <!-- =======================================================
+       HEADER
+  ======================================================= -->
+
+  <header
+    class="site-header"
+    id="header"
+  >
+
     <div class="container nav">
-      <a class="brand" href="#inicio" aria-label="Distribuciones Urbanas - Inicio">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none">
-            <path d="M5 9.5h13.2v13H5z" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/>
-            <path d="M18.2 14h4.1l4.2 4.2v4.3h-8.3z" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/>
-            <circle cx="10" cy="24.2" r="2.4" stroke="currentColor" stroke-width="2.1"/>
-            <circle cx="23.2" cy="24.2" r="2.4" stroke="currentColor" stroke-width="2.1"/>
+
+      <a
+        class="brand"
+        href="#inicio"
+        aria-label="Distribuciones Urbanas - Inicio"
+      >
+
+        <!-- LOGO SVG INLINE -->
+        <span
+          class="brand-mark"
+          aria-hidden="true"
+        >
+
+          <svg
+            viewBox="0 0 120 100"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+          >
+
+            <!-- TECHO DEL DEPÓSITO -->
+
+            <path
+              d="M10 32 L55 8 L110 34"
+              stroke="#062b49"
+              stroke-width="7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+            <path
+              d="M110 34 V72"
+              stroke="#062b49"
+              stroke-width="7"
+              stroke-linecap="round"
+            />
+
+
+            <!-- PORTÓN -->
+
+            <path
+              d="M68 30 V70 H92 V37 Z"
+              fill="#062b49"
+            />
+
+            <path
+              d="M72 41 L89 46"
+              stroke="#ffffff"
+              stroke-width="2.5"
+              stroke-linecap="round"
+            />
+
+            <path
+              d="M72 49 L89 54"
+              stroke="#ffffff"
+              stroke-width="2.5"
+              stroke-linecap="round"
+            />
+
+            <path
+              d="M72 57 L89 62"
+              stroke="#ffffff"
+              stroke-width="2.5"
+              stroke-linecap="round"
+            />
+
+
+            <!-- CAMIÓN -->
+
+            <path
+              d="M20 42 H55
+                 C62 42 68 46 72 52
+                 L76 62
+                 H20 Z"
+              fill="#062b49"
+            />
+
+            <!-- CABINA -->
+
+            <path
+              d="M54 44
+                 C63 44 69 48 73 55
+                 L76 63
+                 H54 Z"
+              fill="#ffffff"
+            />
+
+            <!-- VENTANA -->
+
+            <path
+              d="M57 47
+                 H65
+                 C68 47 70 49 72 53
+                 L73 56
+                 H57 Z"
+              fill="#062b49"
+            />
+
+            <!-- CAJA -->
+
+            <path
+              d="M19 42 H54 V67 H19 Z"
+              fill="#ffffff"
+            />
+
+            <path
+              d="M19 42 H54 V67 H19"
+              stroke="#062b49"
+              stroke-width="4"
+              stroke-linejoin="round"
+            />
+
+
+            <!-- RUEDAS -->
+
+            <circle
+              cx="30"
+              cy="69"
+              r="7"
+              fill="#062b49"
+            />
+
+            <circle
+              cx="30"
+              cy="69"
+              r="3"
+              fill="#ffffff"
+            />
+
+            <circle
+              cx="62"
+              cy="69"
+              r="7"
+              fill="#062b49"
+            />
+
+            <circle
+              cx="62"
+              cy="69"
+              r="3"
+              fill="#ffffff"
+            />
+
+
+            <!-- FRENTE -->
+
+            <path
+              d="M75 62 H84
+                 C86 62 88 64 88 66
+                 V69 H74 Z"
+              fill="#062b49"
+            />
+
+
+            <!-- LÍNEA DE PISO -->
+
+            <path
+              d="M10 76 H108"
+              stroke="#062b49"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+
+
+            <!-- LÍNEAS VERDES -->
+
+            <path
+              d="M11 48 H30"
+              stroke="#9be33c"
+              stroke-width="5"
+              stroke-linecap="round"
+            />
+
+            <path
+              d="M15 57 H33"
+              stroke="#9be33c"
+              stroke-width="5"
+              stroke-linecap="round"
+            />
+
+            <path
+              d="M19 66 H36"
+              stroke="#9be33c"
+              stroke-width="5"
+              stroke-linecap="round"
+            />
+
           </svg>
+
         </span>
-        <span class="brand-name">DISTRIBUCIONES <span>URBANAS</span></span>
+
+
+        <span class="brand-name">
+          DISTRIBUCIONES
+          <span>URBANAS</span>
+        </span>
+
       </a>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+
+      <!-- BOTÓN MOBILE -->
+
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
+
+          <path
+            d="M4 7h16
+               M4 12h16
+               M4 17h16"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+
         </svg>
+
       </button>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#empresa">Empresa</a></li>
-        <li><a href="#operacion">Operación</a></li>
-        <li><a class="nav-cta" href="#contacto">Solicitar cotización</a></li>
+
+      <!-- MENU -->
+
+      <ul
+        class="nav-links"
+        id="navLinks"
+      >
+
+        <li>
+          <a href="#inicio">
+            Inicio
+          </a>
+        </li>
+
+        <li>
+          <a href="#servicios">
+            Servicios
+          </a>
+        </li>
+
+        <li>
+          <a href="#empresa">
+            Empresa
+          </a>
+        </li>
+
+        <li>
+          <a href="#operacion">
+            Operación
+          </a>
+        </li>
+
+        <li>
+          <a
+            class="nav-cta"
+            href="#contacto"
+          >
+            Solicitar cotización
+          </a>
+        </li>
+
       </ul>
+
     </div>
+
   </header>
 
+
   <main>
-    <!-- HERO -->
-    <section class="hero" id="inicio">
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section
+      class="hero"
+      id="inicio"
+    >
+
       <div class="hero-media">
-        <img src="exterior-principal.jpeg" alt="Predio logístico de Distribuciones Urbanas en Canning">
+
+        <img
+          src="exterior-principal.jpeg"
+          alt="Predio logístico de Distribuciones Urbanas en Canning"
+          fetchpriority="high"
+          decoding="async"
+        >
+
       </div>
 
+
       <div class="container">
+
         <div class="hero-content reveal">
-          <div class="eyebrow">Logística y distribución</div>
-          <h1>Logística que<br><span>mueve tu negocio.</span></h1>
-          <p class="hero-copy">Soluciones integrales de distribución urbana, almacenamiento y operación logística para empresas que necesitan eficiencia, cumplimiento y una estructura preparada para crecer.</p>
+
+          <div class="eyebrow">
+            Logística y distribución
+          </div>
+
+          <h1>
+            Logística que<br>
+            <span>mueve tu negocio.</span>
+          </h1>
+
+          <p class="hero-copy">
+            Soluciones integrales de distribución urbana,
+            almacenamiento y operación logística para empresas
+            que necesitan eficiencia, cumplimiento y una
+            estructura preparada para crecer.
+          </p>
+
 
           <div class="hero-actions">
-            <a href="#contacto" class="btn btn-primary">
+
+            <a
+              href="#contacto"
+              class="btn btn-primary"
+            >
+
               Solicitar cotización
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
-                <path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+
+                <path
+                  d="M5 12h13
+                     M13 6l6 6-6 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
               </svg>
+
             </a>
-            <a href="#servicios" class="btn btn-ghost">Conocer servicios</a>
+
+
+            <a
+              href="#servicios"
+              class="btn btn-ghost"
+            >
+              Conocer servicios
+            </a>
+
           </div>
+
         </div>
+
       </div>
+
+
+      <!-- DATOS HERO -->
 
       <div class="hero-bottom">
+
         <div class="container hero-trust">
-          <div class="trust-item"><span class="trust-value">+1.500 m²</span><span class="trust-label">Predio logístico</span></div>
-          <div class="trust-item"><span class="trust-value">4</span><span class="trust-label">Camiones propios</span></div>
-          <div class="trust-item"><span class="trust-value">24 hs</span><span class="trust-label">Seguridad K.S.</span></div>
-          <div class="trust-item"><span class="trust-value">Canning</span><span class="trust-label">Ubicación estratégica</span></div>
+
+          <div class="trust-item">
+            <span class="trust-value">
+              +1.500 m²
+            </span>
+
+            <span class="trust-label">
+              Predio logístico
+            </span>
+          </div>
+
+
+          <div class="trust-item">
+            <span class="trust-value">
+              4
+            </span>
+
+            <span class="trust-label">
+              Camiones propios
+            </span>
+          </div>
+
+
+          <div class="trust-item">
+            <span class="trust-value">
+              24 hs
+            </span>
+
+            <span class="trust-label">
+              Seguridad K.S.
+            </span>
+          </div>
+
+
+          <div class="trust-item">
+            <span class="trust-value">
+              Canning
+            </span>
+
+            <span class="trust-label">
+              Ubicación estratégica
+            </span>
+          </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- METRICS -->
-    <section class="metrics" aria-label="Datos de la empresa">
+
+    <!-- =====================================================
+         METRICS
+    ====================================================== -->
+
+    <section
+      class="metrics"
+      aria-label="Datos de la empresa"
+    >
+
       <div class="container metrics-grid reveal">
-        <div class="metric"><strong>+1.500</strong><span>m² de infraestructura logística</span></div>
-        <div class="metric"><strong>4</strong><span>unidades de transporte propias</span></div>
-        <div class="metric"><strong>24 hs</strong><span>seguridad K.S.</span></div>
-        <div class="metric"><strong>100%</strong><span>compromiso con la operación</span></div>
+
+        <div class="metric">
+          <strong>
+            +1.500
+          </strong>
+
+          <span>
+            m² de infraestructura logística
+          </span>
+        </div>
+
+
+        <div class="metric">
+          <strong>
+            4
+          </strong>
+
+          <span>
+            unidades de transporte propias
+          </span>
+        </div>
+
+
+        <div class="metric">
+          <strong>
+            24 hs
+          </strong>
+
+          <span>
+            seguridad K.S.
+          </span>
+        </div>
+
+
+        <div class="metric">
+          <strong>
+            100%
+          </strong>
+
+          <span>
+            compromiso con la operación
+          </span>
+        </div>
+
       </div>
+
     </section>
 
-    <!-- SERVICES -->
-    <section class="services" id="servicios">
+
+    <!-- =====================================================
+         SERVICIOS
+    ====================================================== -->
+
+    <section
+      class="services"
+      id="servicios"
+    >
+
       <div class="container">
+
         <div class="section-head center reveal">
-          <div class="eyebrow">Lo que hacemos</div>
-          <h2>Una operación integral, de punta a punta.</h2>
-          <p>Integramos almacenamiento, preparación, distribución y soporte operativo para simplificar la cadena logística de nuestros clientes.</p>
+
+          <div class="eyebrow">
+            Lo que hacemos
+          </div>
+
+          <h2>
+            Una operación integral,
+            de punta a punta.
+          </h2>
+
+          <p>
+            Integramos almacenamiento, preparación,
+            distribución y soporte operativo para
+            simplificar la cadena logística de nuestros clientes.
+          </p>
+
         </div>
+
 
         <div class="service-grid">
-          <article class="service-card reveal">
-            <img src="flota.jpeg" alt="Camión de distribución frente al predio logístico" loading="lazy">
-            <div class="service-content">
-              <div class="service-number">01 / DISTRIBUCIÓN</div>
-              <h3>Distribución urbana</h3>
-              <p>Coordinamos el despacho y traslado de mercadería mediante flota propia y unidades tercerizadas.</p>
-            </div>
-          </article>
+
 
           <article class="service-card reveal">
-            <img src="interior-deposito.jpeg" alt="Interior del depósito con pallets y autoelevador" loading="lazy">
+
+            <img
+              src="flota.jpeg"
+              alt="Camión de distribución frente al predio logístico"
+              loading="lazy"
+              decoding="async"
+            >
+
             <div class="service-content">
-              <div class="service-number">02 / ALMACENAMIENTO</div>
-              <h3>Almacenamiento</h3>
-              <p>Recepción, guarda, organización, preparación y despacho de mercadería dentro de nuestra infraestructura.</p>
+
+              <div class="service-number">
+                01 / DISTRIBUCIÓN
+              </div>
+
+              <h3>
+                Distribución urbana
+              </h3>
+
+              <p>
+                Coordinamos el despacho y traslado de mercadería
+                mediante flota propia y unidades tercerizadas.
+              </p>
+
             </div>
+
           </article>
 
-          <article class="service-card reveal">
-            <img src="exterior-porton.jpeg" alt="Ingreso al predio logístico con camión" loading="lazy">
-            <div class="service-content">
-              <div class="service-number">03 / OPERACIÓN</div>
-              <h3>Operación logística</h3>
-              <p>Gestionamos las distintas etapas del proceso para mantener una operación ordenada, eficiente y adaptable.</p>
-            </div>
-          </article>
 
           <article class="service-card reveal">
-            <img src="exterior-principal.jpeg" alt="Predio de Distribuciones Urbanas" loading="lazy">
+
+            <img
+              src="interior-deposito.jpeg"
+              alt="Interior del depósito con pallets y autoelevador"
+              loading="lazy"
+              decoding="async"
+            >
+
             <div class="service-content">
-              <div class="service-number">04 / SERVICIO</div>
-              <h3>Soluciones a medida</h3>
-              <p>Adaptamos nuestra estructura y recursos a las necesidades particulares de cada operación y cliente.</p>
+
+              <div class="service-number">
+                02 / ALMACENAMIENTO
+              </div>
+
+              <h3>
+                Almacenamiento
+              </h3>
+
+              <p>
+                Recepción, guarda, organización, preparación y
+                despacho de mercadería dentro de nuestra infraestructura.
+              </p>
+
             </div>
+
           </article>
+
+
+          <article class="service-card reveal">
+
+            <img
+              src="exterior-porton.jpeg"
+              alt="Ingreso al predio logístico con camión"
+              loading="lazy"
+              decoding="async"
+            >
+
+            <div class="service-content">
+
+              <div class="service-number">
+                03 / OPERACIÓN
+              </div>
+
+              <h3>
+                Operación logística
+              </h3>
+
+              <p>
+                Gestionamos las distintas etapas del proceso para
+                mantener una operación ordenada, eficiente y adaptable.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="service-card reveal">
+
+            <img
+              src="exterior-principal.jpeg"
+              alt="Predio de Distribuciones Urbanas"
+              loading="lazy"
+              decoding="async"
+            >
+
+            <div class="service-content">
+
+              <div class="service-number">
+                04 / SERVICIO
+              </div>
+
+              <h3>
+                Soluciones a medida
+              </h3>
+
+              <p>
+                Adaptamos nuestra estructura y recursos a las
+                necesidades particulares de cada operación y cliente.
+              </p>
+
+            </div>
+
+          </article>
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- COMPANY -->
-    <section class="company" id="empresa">
+
+    <!-- =====================================================
+         EMPRESA
+    ====================================================== -->
+
+    <section
+      class="company"
+      id="empresa"
+    >
+
       <div class="container company-grid">
+
+
         <div class="company-copy reveal">
-          <div class="eyebrow">Nuestra estructura</div>
-          <h2>Infraestructura real.<br><span>Capacidad para crecer.</span></h2>
-          <p>Contamos con una infraestructura diseñada para brindar soluciones eficientes de almacenamiento y distribución.</p>
-          <p>Nuestro predio logístico se encuentra ubicado en <strong>Canning, sobre Perito Moreno 554</strong>, con una superficie superior a los <strong>1.500 m²</strong>.</p>
-          <p>Combinamos infraestructura, recursos humanos y una flota propia con una red de transporte tercerizado para ofrecer un servicio confiable y adaptable.</p>
+
+          <div class="eyebrow">
+            Nuestra estructura
+          </div>
+
+          <h2>
+            Infraestructura real.<br>
+            <span>Capacidad para crecer.</span>
+          </h2>
+
+          <p>
+            Contamos con una infraestructura diseñada para
+            brindar soluciones eficientes de almacenamiento
+            y distribución.
+          </p>
+
+          <p>
+            Nuestro predio logístico se encuentra ubicado en
+            <strong>Canning, sobre Perito Moreno 554</strong>,
+            con una superficie superior a los
+            <strong>1.500 m²</strong>.
+          </p>
+
+          <p>
+            Combinamos infraestructura, recursos humanos y una
+            flota propia con una red de transporte tercerizado
+            para ofrecer un servicio confiable y adaptable.
+          </p>
+
 
           <ul class="company-list">
-            <li><span class="check">✓</span> Predio de más de 1.500 m²</li>
-            <li><span class="check">✓</span> Ubicación estratégica en Canning</li>
-            <li><span class="check">✓</span> Seguridad K.S. las 24 horas</li>
-            <li><span class="check">✓</span> 4 camiones propios</li>
-            <li><span class="check">✓</span> Transporte tercerizado</li>
-            <li><span class="check">✓</span> Operación logística integral</li>
+
+            <li>
+              <span class="check">✓</span>
+              Predio de más de 1.500 m²
+            </li>
+
+            <li>
+              <span class="check">✓</span>
+              Ubicación estratégica en Canning
+            </li>
+
+            <li>
+              <span class="check">✓</span>
+              Seguridad K.S. las 24 horas
+            </li>
+
+            <li>
+              <span class="check">✓</span>
+              4 camiones propios
+            </li>
+
+            <li>
+              <span class="check">✓</span>
+              Transporte tercerizado
+            </li>
+
+            <li>
+              <span class="check">✓</span>
+              Operación logística integral
+            </li>
+
           </ul>
+
         </div>
+
 
         <div class="company-image reveal">
-          <img src="interior-deposito.jpeg" alt="Infraestructura interior del depósito logístico" loading="lazy">
+
+          <img
+            src="interior-deposito.jpeg"
+            alt="Infraestructura interior del depósito logístico"
+            loading="lazy"
+            decoding="async"
+          >
+
           <div class="image-caption">
-            <strong>Más de 1.500 m²</strong>
-            <span>Infraestructura para almacenamiento y operación logística.</span>
+
+            <strong>
+              Más de 1.500 m²
+            </strong>
+
+            <span>
+              Infraestructura para almacenamiento
+              y operación logística.
+            </span>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- OPERATION -->
-    <section class="visual-operation" id="operacion">
+
+    <!-- =====================================================
+         OPERACIÓN
+    ====================================================== -->
+
+    <section
+      class="visual-operation"
+      id="operacion"
+    >
+
       <div class="visual-grid">
+
+
         <div class="visual-image">
-          <img src="exterior-porton.jpeg" alt="Predio logístico con portón de carga abierto" loading="lazy">
+
+          <img
+            src="exterior-porton.jpeg"
+            alt="Predio logístico con portón de carga abierto"
+            loading="lazy"
+            decoding="async"
+          >
+
         </div>
+
 
         <div class="visual-copy">
+
           <div>
-            <div class="eyebrow">Cómo trabajamos</div>
-            <h2>Cada etapa,<br>conectada.</h2>
-            <p>Integramos las distintas etapas de la cadena para que la mercadería avance de forma ordenada desde su ingreso hasta la entrega.</p>
+
+            <div class="eyebrow">
+              Cómo trabajamos
+            </div>
+
+            <h2>
+              Cada etapa,<br>
+              conectada.
+            </h2>
+
+            <p>
+              Integramos las distintas etapas de la cadena para
+              que la mercadería avance de forma ordenada desde
+              su ingreso hasta la entrega.
+            </p>
+
 
             <ol class="process-list">
+
               <li>
-                <span class="process-num">01</span>
-                <div><strong>Recepción</strong><span>Coordinamos el ingreso de la mercadería al centro logístico.</span></div>
+
+                <span class="process-num">
+                  01
+                </span>
+
+                <div>
+                  <strong>
+                    Recepción
+                  </strong>
+
+                  <span>
+                    Coordinamos el ingreso de la mercadería
+                    al centro logístico.
+                  </span>
+                </div>
+
               </li>
+
+
               <li>
-                <span class="process-num">02</span>
-                <div><strong>Almacenamiento</strong><span>Organizamos y administramos el stock.</span></div>
+
+                <span class="process-num">
+                  02
+                </span>
+
+                <div>
+                  <strong>
+                    Almacenamiento
+                  </strong>
+
+                  <span>
+                    Organizamos y administramos el stock.
+                  </span>
+                </div>
+
               </li>
+
+
               <li>
-                <span class="process-num">03</span>
-                <div><strong>Preparación</strong><span>Preparamos los pedidos según cada requerimiento.</span></div>
+
+                <span class="process-num">
+                  03
+                </span>
+
+                <div>
+                  <strong>
+                    Preparación
+                  </strong>
+
+                  <span>
+                    Preparamos los pedidos según cada requerimiento.
+                  </span>
+                </div>
+
               </li>
+
+
               <li>
-                <span class="process-num">04</span>
-                <div><strong>Distribución</strong><span>Despachamos con flota propia y transporte tercerizado.</span></div>
+
+                <span class="process-num">
+                  04
+                </span>
+
+                <div>
+                  <strong>
+                    Distribución
+                  </strong>
+
+                  <span>
+                    Despachamos con flota propia y
+                    transporte tercerizado.
+                  </span>
+                </div>
+
               </li>
+
+
               <li>
-                <span class="process-num">05</span>
-                <div><strong>Entrega y gestión</strong><span>Buscamos eficiencia, cumplimiento y calidad de servicio.</span></div>
+
+                <span class="process-num">
+                  05
+                </span>
+
+                <div>
+                  <strong>
+                    Entrega y gestión
+                  </strong>
+
+                  <span>
+                    Buscamos eficiencia, cumplimiento
+                    y calidad de servicio.
+                  </span>
+                </div>
+
               </li>
+
             </ol>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- FLEET -->
+
+    <!-- =====================================================
+         FLOTA
+    ====================================================== -->
+
     <section class="fleet">
+
       <div class="container">
+
         <div class="section-head reveal">
-          <div class="eyebrow">Flota y distribución</div>
-          <h2>Recursos para acompañar tu operación.</h2>
-          <p>Contamos con unidades propias y una red de transporte tercerizado para responder a las necesidades de distribución.</p>
+
+          <div class="eyebrow">
+            Flota y distribución
+          </div>
+
+          <h2>
+            Recursos para acompañar tu operación.
+          </h2>
+
+          <p>
+            Contamos con unidades propias y una red de
+            transporte tercerizado para responder a las
+            necesidades de distribución.
+          </p>
+
         </div>
+
 
         <div class="fleet-grid">
+
+
           <div class="fleet-image reveal">
-            <img src="flota.jpeg" alt="Camión de distribución de Distribuciones Urbanas" loading="lazy">
+
+            <img
+              src="flota.jpeg"
+              alt="Camión de distribución de Distribuciones Urbanas"
+              loading="lazy"
+              decoding="async"
+            >
+
           </div>
+
 
           <div class="fleet-copy reveal">
-            <h2>Una red preparada para llegar.</h2>
-            <p>Nuestra operación combina infraestructura, flota y coordinación logística para ofrecer una solución flexible según el volumen y las características de cada servicio.</p>
+
+            <h2>
+              Una red preparada para llegar.
+            </h2>
+
+            <p>
+              Nuestra operación combina infraestructura,
+              flota y coordinación logística para ofrecer
+              una solución flexible según el volumen y las
+              características de cada servicio.
+            </p>
+
 
             <ul class="fleet-points">
-              <li><span class="check">✓</span> Flota propia para distribución</li>
-              <li><span class="check">✓</span> Unidades de transporte tercerizadas</li>
-              <li><span class="check">✓</span> Coordinación de despachos y entregas</li>
-              <li><span class="check">✓</span> Operación adaptable a cada cliente</li>
+
+              <li>
+                <span class="check">✓</span>
+                Flota propia para distribución
+              </li>
+
+              <li>
+                <span class="check">✓</span>
+                Unidades de transporte tercerizadas
+              </li>
+
+              <li>
+                <span class="check">✓</span>
+                Coordinación de despachos y entregas
+              </li>
+
+              <li>
+                <span class="check">✓</span>
+                Operación adaptable a cada cliente
+              </li>
+
             </ul>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- CONTACT -->
-    <section class="contact" id="contacto">
+
+    <!-- =====================================================
+         CONTACTO
+    ====================================================== -->
+
+    <section
+      class="contact"
+      id="contacto"
+    >
+
       <div class="container contact-grid">
+
+
         <div class="contact-copy reveal">
-          <div class="eyebrow">Contacto</div>
-          <h2>Hablemos de tu <span>operación.</span></h2>
-          <p>Contanos qué necesitás distribuir, almacenar o gestionar y analizamos una solución logística para tu empresa.</p>
+
+          <div class="eyebrow">
+            Contacto
+          </div>
+
+          <h2>
+            Hablemos de tu
+            <span>operación.</span>
+          </h2>
+
+          <p>
+            Contanos qué necesitás distribuir, almacenar
+            o gestionar y analizamos una solución logística
+            para tu empresa.
+          </p>
+
 
           <div class="contact-details">
-            <div class="contact-detail">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z" stroke="currentColor" stroke-width="1.8"/>
-                <circle cx="12" cy="9" r="2.3" stroke="currentColor" stroke-width="1.8"/>
-              </svg>
-              <span><strong>Perito Moreno 554, Canning</strong></span>
-            </div>
+
+
+            <!-- UBICACIÓN -->
 
             <div class="contact-detail">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M4 19V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14" stroke="currentColor" stroke-width="1.8"/>
-                <path d="M3 19h18M8 19v2h8v-2M8 8h3M8 12h3M13 8h3M13 12h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+
+                <path
+                  d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+
+                <circle
+                  cx="12"
+                  cy="9"
+                  r="2.3"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+
               </svg>
-              <span>Predio logístico de más de 1.500 m²</span>
+
+              <span>
+                <strong>
+                  Perito Moreno 554, Canning
+                </strong>
+              </span>
+
             </div>
 
-            <div class="contact-detail">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M12 3 20 6v5c0 5.1-3.3 8.6-8 10-4.7-1.4-8-4.9-8-10V6l8-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-                <path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Seguridad K.S. 24 horas</span>
-            </div>
+
+            <!-- INFRAESTRUCTURA -->
 
             <div class="contact-detail">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M3 6h11v11H3zM14 10h3l4 4v3h-7z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-                <circle cx="7" cy="19" r="2" stroke="currentColor" stroke-width="1.8"/>
-                <circle cx="18" cy="19" r="2" stroke="currentColor" stroke-width="1.8"/>
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+
+                <path
+                  d="M4 19V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+
+                <path
+                  d="M3 19h18
+                     M8 19v2h8v-2
+                     M8 8h3
+                     M8 12h3
+                     M13 8h3
+                     M13 12h3"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+
               </svg>
-              <span>Flota propia + transporte tercerizado</span>
+
+              <span>
+                Predio logístico de más de 1.500 m²
+              </span>
+
             </div>
+
+
+            <!-- SEGURIDAD -->
+
+            <div class="contact-detail">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+
+                <path
+                  d="M12 3 20 6v5c0 5.1-3.3 8.6-8 10-4.7-1.4-8-4.9-8-10V6l8-3Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linejoin="round"
+                />
+
+                <path
+                  d="m9 12 2 2 4-4"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+              </svg>
+
+              <span>
+                Seguridad K.S. 24 horas
+              </span>
+
+            </div>
+
+
+            <!-- FLOTA -->
+
+            <div class="contact-detail">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+
+                <path
+                  d="M3 6h11v11H3z
+                     M14 10h3l4 4v3h-7z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linejoin="round"
+                />
+
+                <circle
+                  cx="7"
+                  cy="19"
+                  r="2"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+
+                <circle
+                  cx="18"
+                  cy="19"
+                  r="2"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+
+              </svg>
+
+              <span>
+                Flota propia + transporte tercerizado
+              </span>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-detail">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+
+                <rect
+                  x="3"
+                  y="5"
+                  width="18"
+                  height="14"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+
+                <path
+                  d="m4 7 8 6 8-6"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+              </svg>
+
+              <a
+                href="mailto:distribucionesurbanas.rcarrizo@gmail.com"
+              >
+                distribucionesurbanas.rcarrizo@gmail.com
+              </a>
+
+            </div>
+
+
           </div>
+
         </div>
+
+
+        <!-- FORMULARIO -->
 
         <div class="form-card reveal">
-          <h3>Solicitá información</h3>
-          <p>Completá tus datos y contanos brevemente qué necesitás.</p>
 
-          <form id="contactForm">
+          <h3>
+            Solicitá información
+          </h3>
+
+          <p>
+            Completá tus datos y contanos brevemente
+            qué necesitás.
+          </p>
+
+
+          <form
+            id="contactForm"
+            action="https://formsubmit.co/distribucionesurbanas.rcarrizo@gmail.com"
+            method="POST"
+          >
+
+            <!-- CONFIGURACIÓN FORMSUBMIT -->
+
+            <input
+              type="hidden"
+              name="_subject"
+              value="Nueva consulta desde Distribuciones Urbanas"
+            >
+
+            <input
+              type="hidden"
+              name="_captcha"
+              value="false"
+            >
+
+            <input
+              type="hidden"
+              name="_template"
+              value="table"
+            >
+
+            <input
+              type="hidden"
+              name="_next"
+              value="https://distribucionesurbanas.com.ar/?enviado=1#contacto"
+            >
+
+            <input
+              type="text"
+              name="_honey"
+              tabindex="-1"
+              autocomplete="off"
+              style="display:none"
+            >
+
+
             <div class="form-grid">
-              <div class="field">
-                <label for="nombre">Nombre / Empresa</label>
-                <input id="nombre" name="nombre" type="text" placeholder="Tu nombre o empresa" required>
-              </div>
+
 
               <div class="field">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="nombre@empresa.com" required>
+
+                <label for="nombre">
+                  Nombre / Empresa
+                </label>
+
+                <input
+                  id="nombre"
+                  name="Nombre / Empresa"
+                  type="text"
+                  placeholder="Tu nombre o empresa"
+                  autocomplete="organization"
+                  required
+                >
+
               </div>
 
-              <div class="field">
-                <label for="telefono">Teléfono</label>
-                <input id="telefono" name="telefono" type="tel" placeholder="Tu teléfono">
-              </div>
 
               <div class="field">
-                <label for="servicio">Servicio</label>
-                <input id="servicio" name="servicio" type="text" placeholder="Distribución, depósito, etc.">
+
+                <label for="email">
+                  Email
+                </label>
+
+                <input
+                  id="email"
+                  name="Email"
+                  type="email"
+                  placeholder="nombre@empresa.com"
+                  autocomplete="email"
+                  required
+                >
+
               </div>
+
+
+              <div class="field">
+
+                <label for="telefono">
+                  Teléfono
+                </label>
+
+                <input
+                  id="telefono"
+                  name="Teléfono"
+                  type="tel"
+                  placeholder="Tu teléfono"
+                  autocomplete="tel"
+                >
+
+              </div>
+
+
+              <div class="field">
+
+                <label for="servicio">
+                  Servicio
+                </label>
+
+                <input
+                  id="servicio"
+                  name="Servicio"
+                  type="text"
+                  placeholder="Distribución, depósito, etc."
+                >
+
+              </div>
+
 
               <div class="field full">
-                <label for="mensaje">Necesidad logística</label>
-                <textarea id="mensaje" name="mensaje" placeholder="Contanos brevemente sobre tu operación..." required></textarea>
+
+                <label for="mensaje">
+                  Necesidad logística
+                </label>
+
+                <textarea
+                  id="mensaje"
+                  name="Necesidad logística"
+                  placeholder="Contanos brevemente sobre tu operación..."
+                  required
+                ></textarea>
+
               </div>
+
             </div>
 
-            <button class="btn btn-primary" type="submit">
+
+            <button
+              class="btn btn-primary"
+              type="submit"
+              id="submitButton"
+            >
+
               Enviar consulta
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none">
-                <path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+
+                <path
+                  d="M5 12h13
+                     M13 6l6 6-6 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
               </svg>
+
             </button>
 
-            <div class="form-note" id="formNote">
-              Al enviar se abrirá tu cliente de correo con la consulta preparada.
+
+            <div
+              class="form-note"
+              id="formNote"
+            >
+              Tu consulta será enviada directamente al
+              equipo de Distribuciones Urbanas.
             </div>
+
           </form>
+
         </div>
+
       </div>
+
     </section>
+
   </main>
 
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================= -->
+
   <footer>
+
     <div class="container footer-inner">
-      <div class="footer-brand">DISTRIBUCIONES <span>URBANAS</span></div>
-      <div>© 2026 Distribuciones Urbanas · Logística, distribución y almacenamiento.</div>
+
+      <div class="footer-brand">
+        DISTRIBUCIONES
+        <span>URBANAS</span>
+      </div>
+
+      <div>
+        © 2026 Distribuciones Urbanas ·
+        Logística, distribución y almacenamiento.
+      </div>
+
     </div>
+
   </footer>
 
+
+  <!-- =======================================================
+       WHATSAPP FLOTANTE
+  ======================================================= -->
+
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/5491154267539?text=Hola%20Distribuciones%20Urbanas%2C%20quiero%20hacer%20una%20consulta."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
+    title="Contactar por WhatsApp"
+  >
+
+    <svg
+      viewBox="0 0 32 32"
+      fill="none"
+      aria-hidden="true"
+    >
+
+      <path
+        d="M16 4.5
+           C9.65 4.5 4.5 9.55 4.5 15.8
+           C4.5 18.05 5.2 20.15 6.4 21.9
+           L4 27.5
+           L9.85 25.6
+           C11.6 26.65 13.7 27.25 16 27.25
+           C22.35 27.25 27.5 22.15 27.5 15.8
+           C27.5 9.55 22.35 4.5 16 4.5Z"
+        stroke="white"
+        stroke-width="2.2"
+        stroke-linejoin="round"
+      />
+
+      <path
+        d="M11.1 10.8
+           C10.7 10.8 10.4 11.05 10.2 11.45
+           C9.85 12.25 9.9 13.3 10.35 14.45
+           C11.15 16.55 13.2 19.1 15.45 20.35
+           C17.15 21.3 18.6 21.5 19.55 21.15
+           C20.25 20.9 20.9 20.15 21.05 19.65
+           C21.2 19.15 21.15 18.85 20.75 18.65
+           L18.65 17.65
+           C18.3 17.5 18.05 17.55 17.8 17.85
+           L17.1 18.7
+           C16.95 18.9 16.7 18.95 16.45 18.8
+           C15.4 18.3 13.55 16.55 13.05 15.55
+           C12.9 15.3 12.95 15.1 13.1 14.9
+           L13.65 14.2
+           C13.85 13.95 13.9 13.7 13.75 13.35
+           L12.8 11.15
+           C12.65 10.8 12.4 10.65 12.05 10.65Z"
+        fill="white"
+      />
+
+    </svg>
+
+  </a>
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================= -->
+
   <script>
-    // Header Scroll
-    const header = document.getElementById("header");
-    const updateHeader = () => header.classList.toggle("scrolled", window.scrollY > 10);
-    updateHeader();
-    window.addEventListener("scroll", updateHeader, { passive: true });
 
-    // Menu Mobile
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
+    /* =======================================================
+       HEADER
+    ======================================================= */
 
-    menuBtn.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("open");
-      menuBtn.setAttribute("aria-expanded", String(isOpen));
-    });
+    const header =
+      document.getElementById("header");
 
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuBtn.setAttribute("aria-expanded", "false");
-      });
-    });
+    function updateHeader() {
 
-    // Reveal Observer
-    const revealItems = document.querySelectorAll(".reveal");
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            obs.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
-      revealItems.forEach(item => observer.observe(item));
-    } else {
-      revealItems.forEach(item => item.classList.add("visible"));
+      if (window.scrollY > 10) {
+
+        header.classList.add("scrolled");
+
+      } else {
+
+        header.classList.remove("scrolled");
+
+      }
+
     }
 
-    // Formulario Mailto
-    const contactForm = document.getElementById("contactForm");
-    const formNote = document.getElementById("formNote");
+    updateHeader();
 
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const emailDestino = "info.distribucionesurbanas@gmail.com";
-      const data = new FormData(contactForm);
+    window.addEventListener(
+      "scroll",
+      updateHeader,
+      { passive: true }
+    );
 
-      const subject = encodeURIComponent(`Consulta logística - ${data.get("nombre") || "Nuevo contacto"}`);
-      const body = encodeURIComponent(
-        `Nombre / Empresa: ${data.get("nombre") || ""}\n` +
-        `Email: ${data.get("email") || ""}\n` +
-        `Teléfono: ${data.get("telefono") || ""}\n` +
-        `Servicio: ${data.get("servicio") || ""}\n\n` +
-        `Necesidad logística:\n${data.get("mensaje") || ""}`
+
+    /* =======================================================
+       MENU MOBILE
+    ======================================================= */
+
+    const menuBtn =
+      document.getElementById("menuBtn");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
+
+    menuBtn.addEventListener(
+      "click",
+      () => {
+
+        const isOpen =
+          navLinks.classList.toggle("open");
+
+        menuBtn.setAttribute(
+          "aria-expanded",
+          String(isOpen)
+        );
+
+      }
+    );
+
+
+    navLinks
+      .querySelectorAll("a")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            navLinks.classList.remove("open");
+
+            menuBtn.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+          }
+        );
+
+      });
+
+
+    /* =======================================================
+       REVEAL
+    ======================================================= */
+
+    const revealItems =
+      document.querySelectorAll(".reveal");
+
+
+    if (
+      "IntersectionObserver"
+      in window
+    ) {
+
+      const observer =
+        new IntersectionObserver(
+          (entries, obs) => {
+
+            entries.forEach(
+              entry => {
+
+                if (
+                  entry.isIntersecting
+                ) {
+
+                  entry.target.classList.add(
+                    "visible"
+                  );
+
+                  obs.unobserve(
+                    entry.target
+                  );
+
+                }
+
+              }
+            );
+
+          },
+          {
+            threshold: 0.12
+          }
+        );
+
+
+      revealItems.forEach(
+        item =>
+          observer.observe(item)
       );
 
-      window.location.href = `mailto:${emailDestino}?subject=${subject}&body=${body}`;
-    });
+    } else {
+
+      revealItems.forEach(
+        item =>
+          item.classList.add("visible")
+      );
+
+    }
+
+
+    /* =======================================================
+       FORMULARIO
+    ======================================================= */
+
+    const contactForm =
+      document.getElementById(
+        "contactForm"
+      );
+
+    const submitButton =
+      document.getElementById(
+        "submitButton"
+      );
+
+    const formNote =
+      document.getElementById(
+        "formNote"
+      );
+
+
+    contactForm.addEventListener(
+      "submit",
+      () => {
+
+        submitButton.disabled = true;
+
+        submitButton.style.opacity =
+          "0.7";
+
+        submitButton.style.cursor =
+          "wait";
+
+        formNote.textContent =
+          "Enviando consulta...";
+
+      }
+    );
+
+
+    /* =======================================================
+       MENSAJE DESPUÉS DEL ENVÍO
+    ======================================================= */
+
+    const params =
+      new URLSearchParams(
+        window.location.search
+      );
+
+
+    if (
+      params.get("enviado") === "1"
+    ) {
+
+      formNote.textContent =
+        "¡Consulta enviada correctamente! Nos pondremos en contacto con vos.";
+
+      formNote.style.color =
+        "#5f8f1d";
+
+    }
+
   </script>
+
 
 </body>
 </html>
